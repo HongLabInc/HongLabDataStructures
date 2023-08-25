@@ -11,9 +11,8 @@
 
 ### 선수 과목
 - 프로그래밍 입문은 **[홍정모의 파이썬 추월코스](https://honglab.co.kr/courses/python)**
-- 코테용 C++ 문법은 **[C++ 핵심정리(무료)](https://honglab.co.kr/courses/cppsummary)**
+- 코테 공부용 C++ 문법은 **[C++ 핵심정리(무료)](https://honglab.co.kr/courses/cppsummary)**
 
 ## 예제 사용 방법
-- Visual Studio 2022 설정 제공
-- VSCode 준비중
-
+- Visual Studio 2022 설정 제공 (HongLabDataStructures.sln 더블 클릭)
+- Visual Studio Code는 VSCode 폴더 사용 ([VSCode 사용법](https://youtu.be/uDq7woPOZ_A?si=3qoGEBENHcFFOttB))
