@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <cassert>
 #include <fstream>
 
@@ -12,7 +12,7 @@ struct Element
 
 bool CheckSorted(int* arr, int size)
 {
-	// TODO: Á¤·Ä È®ÀÎ ÇÔ¼ö ±¸Çö
+	// TODO: ì •ë ¬ í™•ì¸ í•¨ìˆ˜ êµ¬í˜„
 
 	return true;
 }
@@ -37,7 +37,7 @@ void Print(Element* arr, int size)
 
 int main()
 {
-	// 3°³ Á¤·Ä
+	// 3ê°œ ì •ë ¬
 	{
 		for (int k = 0; k < 3; k++)
 			for (int j = 0; j < 3; j++)
@@ -52,21 +52,21 @@ int main()
 
 					cout << " -> " << flush;
 
-					//TODO: Á¤·Ä ÇØº¸±â
+					//TODO: ì •ë ¬ í•´ë³´ê¸°
 
 					for (int e = 0; e < size; e++) {
 						cout << arr[e] << " " << flush;
 					}
 
 					cout << boolalpha;
-					cout << CheckSorted(arr, size); // Á¤·Ä µÇ¾ú³ª È®ÀÎ
+					cout << CheckSorted(arr, size); // ì •ë ¬ ë˜ì—ˆë‚˜ í™•ì¸
 					cout << endl;
 				}
 	}
 
-	return 0; // <- ½Ç½À¿ë ÀÓ½Ã
+	return 0; // <- ì‹¤ìŠµìš© ì„ì‹œ
 
-	// 5°³¶ó¸é? ´õ ¸¹´Ù¸é?
+	// 5ê°œë¼ë©´? ë” ë§ë‹¤ë©´?
 	{
 		// 8 4 2 8 3
 		// TODO: ???
@@ -74,27 +74,27 @@ int main()
 		// 8 3 2 5 1 1 2 5 8 9
 		// TODO: ???
 
-		// 100°³¶ó¸é?
+		// 100ê°œë¼ë©´?
 	}
 
-	// °¡Àå ÀÛÀº ¼ö Ã£±â
+	// ê°€ì¥ ì‘ì€ ìˆ˜ ì°¾ê¸°
 	{
-		int arr[] = { 8, 3, 2, 5, 1, 1, 2, 5, 8, 9 }; // ÀÓÀÇÀÇ ¼ıÀÚµé, º¯°æ °¡´É
+		int arr[] = { 8, 3, 2, 5, 1, 1, 2, 5, 8, 9 }; // ì„ì˜ì˜ ìˆ«ìë“¤, ë³€ê²½ ê°€ëŠ¥
 		int size = sizeof(arr) / sizeof(arr[0]);
 
-		assert(size > 0); // size°¡ 1ÀÌ»óÀÌ¶ó°í °¡Á¤
+		assert(size > 0); // sizeê°€ 1ì´ìƒì´ë¼ê³  ê°€ì •
 
 		// TODO:
 
 		// cout << "Minimum number is " << min_number << endl;
 	}
 
-	// °¡Àå ÀÛÀº ¼öÀÇ ÀÎµ¦½º Ã£±â
+	// ê°€ì¥ ì‘ì€ ìˆ˜ì˜ ì¸ë±ìŠ¤ ì°¾ê¸°
 	{
 		int arr[] = { 8, 3, 2, 5, 1, 1, 2, 5, 8, 9 };
 		int size = sizeof(arr) / sizeof(arr[0]);
 
-		assert(size > 0); // size°¡ 1ÀÌ»óÀÌ¶ó°í °¡Á¤
+		assert(size > 0); // sizeê°€ 1ì´ìƒì´ë¼ê³  ê°€ì •
 
 		// TODO:
 
@@ -103,7 +103,7 @@ int main()
 	}
 
 	// Selection Sort
-	// ÈùÆ®: swap()
+	// íŒíŠ¸: swap()
 	{
 		int arr[] = { 8, 3, 2, 5, 1, 1, 2, 5, 8, 9 };
 		int size = sizeof(arr) / sizeof(arr[0]);
@@ -122,7 +122,7 @@ int main()
 		}
 	}
 
-	// ºñ±³ È½¼ö ¼¼º¸±â, ´õ È¿À²ÀûÀÎ ¹æ¹ıÀº ¾øÀ»±î?
+	// ë¹„êµ íšŸìˆ˜ ì„¸ë³´ê¸°, ë” íš¨ìœ¨ì ì¸ ë°©ë²•ì€ ì—†ì„ê¹Œ?
 	// https://en.wikipedia.org/wiki/Sorting_algorithm
 	{
 		ofstream ofile("log.txt");
@@ -147,17 +147,17 @@ int main()
 	}
 
 	// [2, 2, 1]
-	// [1, 2, 2] // Ã¹ 2°¡ ¸¶Áö¸·À¸·Î ÀÌµ¿
+	// [1, 2, 2] // ì²« 2ê°€ ë§ˆì§€ë§‰ìœ¼ë¡œ ì´ë™
 
-	// ¾ÈÁ¤¼º È®ÀÎ(unstable)
+	// ì•ˆì •ì„± í™•ì¸(unstable)
 	{
 		Element arr[] = { {2, 'a'}, {2, 'b'}, {1, 'c'} };
 		int size = sizeof(arr) / sizeof(arr[0]);
 
-		Print(arr, size); // arrÀÌ ElementÀÇ ¹è¿­
+		Print(arr, size); // arrì´ Elementì˜ ë°°ì—´
 
 		// TODO:
 
-		Print(arr, size); // arrÀÌ ElementÀÇ ¹è¿­
+		Print(arr, size); // arrì´ Elementì˜ ë°°ì—´
 	}
 }

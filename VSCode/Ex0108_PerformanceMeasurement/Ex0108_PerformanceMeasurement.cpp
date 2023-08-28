@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <cassert>
 #include <chrono>
 #include <fstream>
@@ -37,7 +37,7 @@ int BinarySearch(int* arr, int n, int x)
 
 	while (left <= right)
 	{
-		int middle = (left + right) / 2; // Á¤¼ö ³ª´©±â (¹ö¸²)
+		int middle = (left + right) / 2; // ì •ìˆ˜ ë‚˜ëˆ„ê¸° (ë²„ë¦¼)
 
 		if (x < arr[middle])
 			right = middle - 1;
@@ -52,23 +52,23 @@ int BinarySearch(int* arr, int n, int x)
 
 int main()
 {
-	// auto´Â ÄÄÆÄÀÏ·¯°¡ µîÈ£ ¿À¸¥ÂÊÀ» º¸°í º¯¼öÀÇ ÀÚ·áÇüÀ» ¾Ë¾Æ¼­ °áÁ¤
-	// ¿¹: auto f = 3.141592f; // f´Â float
-	// ¿¹: auto d = 3.14; // d´Â double
+	// autoëŠ” ì»´íŒŒì¼ëŸ¬ê°€ ë“±í˜¸ ì˜¤ë¥¸ìª½ì„ ë³´ê³  ë³€ìˆ˜ì˜ ìžë£Œí˜•ì„ ì•Œì•„ì„œ ê²°ì •
+	// ì˜ˆ: auto f = 3.141592f; // fëŠ” float
+	// ì˜ˆ: auto d = 3.14; // dëŠ” double
 
-	// ÁÖÀÇ
-	// - ¼Óµµ ÃøÁ¤ÇÒ ¶§´Â release ¸ðµå »ç¿ë
-	// - ÇÁ·ÎÁ§Æ® ¿É¼Ç¿¡¼­ ÃÖÀûÈ­ off (Optimization /Od)
-	// - ¹ÝÈ¯°ªÀ» result·Î ¹ÞÁö ¾ÊÀ¸¸é ÃÖÀûÈ­¿¡¼­ ½ÇÇà »ý·«
+	// ì£¼ì˜
+	// - ì†ë„ ì¸¡ì •í•  ë•ŒëŠ” release ëª¨ë“œ ì‚¬ìš©
+	// - í”„ë¡œì íŠ¸ ì˜µì…˜ì—ì„œ ìµœì í™” off (Optimization /Od)
+	// - ë°˜í™˜ê°’ì„ resultë¡œ ë°›ì§€ ì•Šìœ¼ë©´ ìµœì í™”ì—ì„œ ì‹¤í–‰ ìƒëžµ
 
 	const int kNumTest = int(pow(2, 18));
 
-	// µ¥ÀÌÅÍ ÁØºñ (kNumTest°³ ÃÊ±âÈ­ÇÏ°í n¸¸ ¹Ù²ã°¡¸é¼­ Å×½ºÆ®)
+	// ë°ì´í„° ì¤€ë¹„ (kNumTestê°œ ì´ˆê¸°í™”í•˜ê³  në§Œ ë°”ê¿”ê°€ë©´ì„œ í…ŒìŠ¤íŠ¸)
 
 	ofstream ofile("performance.txt");			// TEST 1
 	//ofstream ofile("performance_worst.txt");  // TEST 2
 
-	//for (int n = 1; n <= kNumTest; n *= 2) // nÀº 1ÀÌ»ó kNumTestÀÌÇÏ
+	//for (int n = 1; n <= kNumTest; n *= 2) // nì€ 1ì´ìƒ kNumTestì´í•˜
 	for (int n = 1; n <= kNumTest; n += int(pow(2, 10)))
 	{
 		int* x_table = new int[n + 1];
@@ -81,12 +81,12 @@ int main()
 
 		double seq_sum = 0.0;
 		double bi_sum = 0.0;
-		double seq_max = 0.0; // °¡Àå Å« °ª (worst)
+		double seq_max = 0.0; // ê°€ìž¥ í° ê°’ (worst)
 		double bi_max = 0.0;
 		double seq_min = 10000.0;
 		double bi_min = 10000.0;
 
-		for (int x = 0; x < n + 1; x++)  // ¸ø Ã£´Â °æ¿ì¸¦ ÇÏ³ª ¸¶Áö¸·¿¡ Ãß°¡
+		for (int x = 0; x < n + 1; x++)  // ëª» ì°¾ëŠ” ê²½ìš°ë¥¼ í•˜ë‚˜ ë§ˆì§€ë§‰ì— ì¶”ê°€
 		{
 			int result_seq;
 			int result_bi;
@@ -100,7 +100,7 @@ int main()
 
 				auto start = high_resolution_clock::now();
 				result_seq = SequentialSearch(arr, n, x_find); // TEST 1
-				//result_seq = SequentialSearch(arr, n, n + rand() % 1000); // TEST 2 <- Ç×»ó ¸øÃ£µµ·Ï
+				//result_seq = SequentialSearch(arr, n, n + rand() % 1000); // TEST 2 <- í•­ìƒ ëª»ì°¾ë„ë¡
 				auto stop = high_resolution_clock::now();
 				auto duration = double(duration_cast<nanoseconds>(stop - start).count()) / 1000.0;
 				seq_sum += duration;
@@ -118,7 +118,7 @@ int main()
 
 				auto start = high_resolution_clock::now();
 				result_bi = BinarySearch(arr, n, x_find); // TEST 1
-				// result_bi = BinarySearch(arr, n, n + rand() % 1000); // TEST 2<- Ç×»ó ¸øÃ£µµ·Ï
+				// result_bi = BinarySearch(arr, n, n + rand() % 1000); // TEST 2<- í•­ìƒ ëª»ì°¾ë„ë¡
 				auto stop = high_resolution_clock::now();
 				auto duration = double(duration_cast<nanoseconds>(stop - start).count()) / 1000.0;
 				bi_sum += duration;
@@ -135,8 +135,8 @@ int main()
 			}
 		}
 
-		seq_sum /= n + 1; // <- º¯¼ö ÀÌ¸§Àº sum ÀÌÁö¸¸ ½ÇÁ¦·Î´Â Æò±Õ
-		bi_sum /= n + 1; // <- º¯¼ö ÀÌ¸§Àº sum ÀÌÁö¸¸ ½ÇÁ¦·Î´Â Æò±Õ
+		seq_sum /= n + 1; // <- ë³€ìˆ˜ ì´ë¦„ì€ sum ì´ì§€ë§Œ ì‹¤ì œë¡œëŠ” í‰ê· 
+		bi_sum /= n + 1; // <- ë³€ìˆ˜ ì´ë¦„ì€ sum ì´ì§€ë§Œ ì‹¤ì œë¡œëŠ” í‰ê· 
 
 		cout << n << ", " << seq_max << ", " << bi_max << ", " << seq_sum << ", " << bi_sum << ", " << seq_min << ", " << bi_min << endl;
 		ofile << n << ", " << seq_max << ", " << bi_max << ", " << seq_sum << ", " << bi_sum << ", " << seq_min << ", " << bi_min << endl;

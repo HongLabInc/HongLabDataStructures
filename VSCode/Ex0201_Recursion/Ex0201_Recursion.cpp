@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 
 using namespace std;
 
@@ -13,28 +13,28 @@ void Func1()
 
 	cout << "This is Func1()" << endl;
 
-	// Func2(); // ½ÇÇà ¼ø¼­¿¡ µû¸¥ °á°ú È®ÀÎ
+	// Func2(); // ì‹¤í–‰ ìˆœì„œì— ë”°ë¥¸ ê²°ê³¼ í™•ì¸
 }
 
 void RecurFunc(int count)
 {
-	if (count == 0) // <- Á¾·á Á¶°Ç
+	if (count == 0) // <- ì¢…ë£Œ ì¡°ê±´
 		return;
 
-	// RecurFunc(count - 1); // <- º¯°æ
+	// RecurFunc(count - 1); // <- ë³€ê²½
 
 	cout << count << endl;
 
-	RecurFunc(count - 1); // <- º¯°æ
+	RecurFunc(count - 1); // <- ë³€ê²½
 
-	// ½ÇÇà À§Ä¡¿¡ µû¶ó °á°ú°¡ ´Þ¶óÁý´Ï´Ù.
+	// ì‹¤í–‰ ìœ„ì¹˜ì— ë”°ë¼ ê²°ê³¼ê°€ ë‹¬ë¼ì§‘ë‹ˆë‹¤.
 }
 
 int main()
 {
-	// Func1(); // ÀÌ¸§ÀÌ ´Ù¸¥ ÇÔ¼ö È£Ãâ
+	// Func1(); // ì´ë¦„ì´ ë‹¤ë¥¸ í•¨ìˆ˜ í˜¸ì¶œ
 
-	RecurFunc(5); // ÀÌ¸§ÀÌ °°Àº ÇÔ¼ö È£Ãâ
+	RecurFunc(5); // ì´ë¦„ì´ ê°™ì€ í•¨ìˆ˜ í˜¸ì¶œ
 
 	return 0;
 }

@@ -1,36 +1,36 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <cassert> // assert()
 
 using namespace std;
 
-// Á¶¾ğ
-// - ¹è¿­ÀÇ °ªµéµµ Á¤¼öÀÌ°í ÀÎµ¦½ºµµ Á¤¼ö¶ó¼­ Çò°¥¸®´Â °ÍÀÌ ´ç¿¬ÇÕ´Ï´Ù. 
-// - ´Ü±â ÁıÁß·ÂÀÌ ÇÊ¿äÇÑµ¥ ÀÍ¼÷ÇØÁö¼Å¾ß ÇÕ´Ï´Ù.
+// ì¡°ì–¸
+// - ë°°ì—´ì˜ ê°’ë“¤ë„ ì •ìˆ˜ì´ê³  ì¸ë±ìŠ¤ë„ ì •ìˆ˜ë¼ì„œ í—·ê°ˆë¦¬ëŠ” ê²ƒì´ ë‹¹ì—°í•©ë‹ˆë‹¤. 
+// - ë‹¨ê¸° ì§‘ì¤‘ë ¥ì´ í•„ìš”í•œë° ìµìˆ™í•´ì§€ì…”ì•¼ í•©ë‹ˆë‹¤.
 
-// ¹è¿­ arr¿¡ x°¡ ¸î ¹ø ³ª¿À´ÂÁö ¹İÈ¯
+// ë°°ì—´ arrì— xê°€ ëª‡ ë²ˆ ë‚˜ì˜¤ëŠ”ì§€ ë°˜í™˜
 int Count(int* arr, int n, int x);
 
-// ¹è¿­ arr¿¡ x°¡ ÀÖÀ¸¸é index ¹İÈ¯, ¾øÀ¸¸é -1 ¹İÈ¯
+// ë°°ì—´ arrì— xê°€ ìˆìœ¼ë©´ index ë°˜í™˜, ì—†ìœ¼ë©´ -1 ë°˜í™˜
 int SequentialSearch(int* arr, int n, int x); // LinearSearch
 
-// Á¤·ÄµÈ ¹è¿­¿¡¼­ x°¡ ¸î ¹ø ³ª¿À´ÂÁö ¹İÈ¯
+// ì •ë ¬ëœ ë°°ì—´ì—ì„œ xê°€ ëª‡ ë²ˆ ë‚˜ì˜¤ëŠ”ì§€ ë°˜í™˜
 int SortedCount(int* arr, int n, int x);
-int SortedCountHelper(int* arr, int n, int x, int start); // start »ç¿ë
+int SortedCountHelper(int* arr, int n, int x, int start); // start ì‚¬ìš©
 
-// Á¤·ÄÇÒ ¶§ »ç¿ë
+// ì •ë ¬í•  ë•Œ ì‚¬ìš©
 void InsertionSort(int* arr, int n);
 
 void Print(int* arr, int size);
 
 int main()
 {
-	// Á¤·ÄµÇÁö ¾ÊÀº µ¥ÀÌÅÍ¸¦ °¡Á¤
+	// ì •ë ¬ë˜ì§€ ì•Šì€ ë°ì´í„°ë¥¼ ê°€ì •
 
 	int arr[] = { 8, 1, 1, 3, 2, 5, 1, 2 , 1, 1 };
 	int n = sizeof(arr) / sizeof(arr[0]);
 
-	// º¹ÀâÇÑ ¾Ë°í¸®ÁòÀÌ³ª ÀÚ·á±¸Á¶¸¦ °³¹ßÇÒ ¶§´Â 
-	// ½Ç¼öÇÒ °¡´É¼ºÀÌ ÀûÀº ´Ü¼øÇÑ ¹æ¹ıÀ» ±âÁØÀ¸·Î »ï¾Æ¿ä.
+	// ë³µì¡í•œ ì•Œê³ ë¦¬ì¦˜ì´ë‚˜ ìë£Œêµ¬ì¡°ë¥¼ ê°œë°œí•  ë•ŒëŠ” 
+	// ì‹¤ìˆ˜í•  ê°€ëŠ¥ì„±ì´ ì ì€ ë‹¨ìˆœí•œ ë°©ë²•ì„ ê¸°ì¤€ìœ¼ë¡œ ì‚¼ì•„ìš”.
 
 	cout << "Count 9 = " << Count(arr, n, 9) << endl;
 	cout << "Count 2 = " << Count(arr, n, 2) << endl;
@@ -56,7 +56,7 @@ int main()
 	return 0;
 }
 
-// ¹è¿­ arr¿¡ x°¡ ¸î ¹ø ³ª¿À´ÂÁö ¹İÈ¯
+// ë°°ì—´ arrì— xê°€ ëª‡ ë²ˆ ë‚˜ì˜¤ëŠ”ì§€ ë°˜í™˜
 int Count(int* arr, int n, int x)
 {
 	// TODO:
@@ -64,7 +64,7 @@ int Count(int* arr, int n, int x)
 	return 0;
 }
 
-// ¹è¿­ arr¿¡ x°¡ ÀÖÀ¸¸é index ¹İÈ¯, ¾øÀ¸¸é -1 ¹İÈ¯
+// ë°°ì—´ arrì— xê°€ ìˆìœ¼ë©´ index ë°˜í™˜, ì—†ìœ¼ë©´ -1 ë°˜í™˜
 int SequentialSearch(int* arr, int n, int x)
 {
 	// TODO:
@@ -72,7 +72,7 @@ int SequentialSearch(int* arr, int n, int x)
 	return -1;
 }
 
-int SortedCountHelper(int* arr, int n, int x, int start) // start »ç¿ë
+int SortedCountHelper(int* arr, int n, int x, int start) // start ì‚¬ìš©
 {
 	// TODO: 
 

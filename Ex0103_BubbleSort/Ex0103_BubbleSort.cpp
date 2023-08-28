@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 
 using namespace std;
 
@@ -22,7 +22,7 @@ void Print(int* arr, int size)
 
 int main()
 {
-	int arr[] = { 5, 1, 4, 2, 8 }; // À§Å°ÇÇµğ¾Æ ¿¹½Ã
+	int arr[] = { 5, 1, 4, 2, 8 }; // ìœ„í‚¤í”¼ë””ì•„ ì˜ˆì‹œ
 	// int arr[] = { 5, 4, 3, 2, 1 }; // Worst Case
 	// int arr[] = { 1, 2, 3, 5, 4 }; // Best Case
 	int n = sizeof(arr) / sizeof(arr[0]);
@@ -32,9 +32,9 @@ int main()
 
 	// Bubble Sort
 	{
-		// ÈùÆ®: Print()·Î ÁøÇà»óÈ² È®ÀÎÇÏ¸é¼­ ±¸Çö
-		// ÈùÆ®: 2Áß for ·çÇÁ
-		// ÈùÆ®: for ·çÇÁ ¹üÀ§ ÁÖÀÇ
+		// íŒíŠ¸: Print()ë¡œ ì§„í–‰ìƒí™© í™•ì¸í•˜ë©´ì„œ êµ¬í˜„
+		// íŒíŠ¸: 2ì¤‘ for ë£¨í”„
+		// íŒíŠ¸: for ë£¨í”„ ë²”ìœ„ ì£¼ì˜
 	}
 
 	// Best case

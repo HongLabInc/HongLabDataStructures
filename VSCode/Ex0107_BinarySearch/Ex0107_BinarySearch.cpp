@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <iomanip>      // std::setw
 
 #include <cassert>
@@ -20,7 +20,7 @@ void PrintHelper(int* arr, int n, int left, int right)
 	cout << endl;
 }
 
-int BinarySearch(int* arr, int n, int x) // ÀÌÁø Å½»ö
+int BinarySearch(int* arr, int n, int x) // ì´ì§„ íƒìƒ‰
 {
 	int left = 0;
 	int right = n - 1;
@@ -29,7 +29,7 @@ int BinarySearch(int* arr, int n, int x) // ÀÌÁø Å½»ö
 	{
 		PrintHelper(arr, n, left, right);
 
-		// int middle = ... ; // Á¤¼ö ³ª´©±â (¹ö¸²)
+		// int middle = ... ; // ì •ìˆ˜ ë‚˜ëˆ„ê¸° (ë²„ë¦¼)
 
 		// cout << "middle " << middle << endl;
 
@@ -49,7 +49,7 @@ int BinarySearch(int* arr, int n, int x) // ÀÌÁø Å½»ö
 		//	return middle;
 		//}
 
-		break; // ÀÓ½Ã: ¹«ÇÑ·çÇÁ ¹æÁö
+		break; // ì„ì‹œ: ë¬´í•œë£¨í”„ ë°©ì§€
 	}
 
 	cout << "Not found" << endl;
@@ -58,14 +58,14 @@ int BinarySearch(int* arr, int n, int x) // ÀÌÁø Å½»ö
 
 int main()
 {
-	// Á¤·ÄµÈ ¹è¿­ (ÀÓÀÇÀÇ ¹è¿­ »ç¿ë °¡´É, ¿©±â¼­´Â µğ¹ö±ë ÆíÀÇ¸¦ À§ÇØ index¿Í °°Àº °ª)
+	// ì •ë ¬ëœ ë°°ì—´ (ì„ì˜ì˜ ë°°ì—´ ì‚¬ìš© ê°€ëŠ¥, ì—¬ê¸°ì„œëŠ” ë””ë²„ê¹… í¸ì˜ë¥¼ ìœ„í•´ indexì™€ ê°™ì€ ê°’)
 	int arr[] = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 	//int arr[] = { 2, 4, 5, 5, 6, 8, 9, 10, 12, 13 };
 	int n = sizeof(arr) / sizeof(arr[0]);
 
 	assert(n > 0);
 
-	// Á¤·ÄÀÌ ¾ÈµÈ ¹è¿­Àº ¹Ì¸® Á¤·Ä
+	// ì •ë ¬ì´ ì•ˆëœ ë°°ì—´ì€ ë¯¸ë¦¬ ì •ë ¬
 
 	BinarySearch(arr, n, 10);
 
