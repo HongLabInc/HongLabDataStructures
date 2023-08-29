@@ -29,6 +29,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Ex0204_RecursiveBinarySearc
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Ex0205_Permutations", "Ex0205_Permutations\Ex0205_Permutations.vcxproj", "{472563EE-3ACD-45B3-9CA0-F0B218F42C9B}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Ex0301_StringAbstractDataType", "Ex0301_StringAbstractDataType\Ex0301_StringAbstractDataType.vcxproj", "{986C2BED-7F98-4B95-9541-1B2C45C44B03}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -141,6 +143,14 @@ Global
 		{472563EE-3ACD-45B3-9CA0-F0B218F42C9B}.Release|x64.Build.0 = Release|x64
 		{472563EE-3ACD-45B3-9CA0-F0B218F42C9B}.Release|x86.ActiveCfg = Release|Win32
 		{472563EE-3ACD-45B3-9CA0-F0B218F42C9B}.Release|x86.Build.0 = Release|Win32
+		{986C2BED-7F98-4B95-9541-1B2C45C44B03}.Debug|x64.ActiveCfg = Debug|x64
+		{986C2BED-7F98-4B95-9541-1B2C45C44B03}.Debug|x64.Build.0 = Debug|x64
+		{986C2BED-7F98-4B95-9541-1B2C45C44B03}.Debug|x86.ActiveCfg = Debug|Win32
+		{986C2BED-7F98-4B95-9541-1B2C45C44B03}.Debug|x86.Build.0 = Debug|Win32
+		{986C2BED-7F98-4B95-9541-1B2C45C44B03}.Release|x64.ActiveCfg = Release|x64
+		{986C2BED-7F98-4B95-9541-1B2C45C44B03}.Release|x64.Build.0 = Release|x64
+		{986C2BED-7F98-4B95-9541-1B2C45C44B03}.Release|x86.ActiveCfg = Release|Win32
+		{986C2BED-7F98-4B95-9541-1B2C45C44B03}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
