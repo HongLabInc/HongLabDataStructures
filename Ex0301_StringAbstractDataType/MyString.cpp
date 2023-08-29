@@ -3,7 +3,6 @@
 using namespace std;
 
 // 비어 있는 MyString() 생성
-
 MyString::MyString()
 {
 	str_ = nullptr;
