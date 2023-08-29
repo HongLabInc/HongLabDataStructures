@@ -25,6 +25,12 @@ subdirs = get_immediate_subdirectories('.')
 print(subdirs)
 
 for sub in subdirs:
+
+    print("VSCode/" + sub)
+
+    if not os.path.isdir("VSCode/" + sub):
+        os.makedirs("VSCode/" + sub)
+
     files = find_cpp_h_files(sub)
     for f in files:
         print(f + " to VSCode/" + f)
@@ -36,7 +42,6 @@ for sub in subdirs:
         with open(f, 'r', encoding='cp949') as file:
             content = file.read()
 
-        // 인코딩 변경 후 복사
         with open("VSCode/" + f, 'w', encoding='utf-8-sig') as file:
             file.write(content)
 
