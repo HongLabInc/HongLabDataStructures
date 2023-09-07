@@ -13,6 +13,11 @@ public:
 		Resize(capacity);
 	}
 
+	~Stack()
+	{
+		if (stack_) delete[] stack_;
+	}
+
 	void Resize(int new_capacity)
 	{
 		T* new_stack = new T[new_capacity];
