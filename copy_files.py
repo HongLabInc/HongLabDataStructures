@@ -5,7 +5,7 @@ import chardet
 
 def get_immediate_subdirectories(dir_path):
     return [name for name in os.listdir(dir_path)
-            if os.path.isdir(os.path.join(dir_path, name)) and name.startswith("Ex")]
+            if os.path.isdir(os.path.join(dir_path, name)) and name.startswith(("Ex", "shared"))]
 
 def find_cpp_h_files(dir_path):
     cpp_h_files = []

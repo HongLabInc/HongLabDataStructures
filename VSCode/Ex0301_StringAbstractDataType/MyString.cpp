@@ -58,7 +58,7 @@ void MyString::Resize(int new_size)
 // 인덱스 start위치의 글자부터 num개의 글자로 새로운 문자열 만들기
 MyString MyString::Substr(int start, int num)
 {
-	// 복사할 인덱스: start, start + 1, ... , start + num + 1
+	// 복사할 인덱스: start, start + 1, ... , start + num - 1
 	// assert(start + num - 1 < this->size_); // 문제를 단순하게 만들기 위해 가정
 
 	MyString temp;
