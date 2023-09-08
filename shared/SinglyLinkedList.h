@@ -79,6 +79,14 @@ public:
 		}
 	}
 
+	void Remove(Node* n)
+	{
+		assert(first_);
+
+		// 하나 앞의 노드를 찾아야 합니다.
+		// TODO:
+	}
+
 	void PushFront(T item)
 	{
 		// first_가 nullptr인 경우와 아닌 경우 나눠서 생각해보기 (결국은 두 경우를 하나로 합칠 수 있음)
@@ -160,7 +168,7 @@ public:
 				{
 					//cout << "[" << current << ", " << current->item << ", " << current->next << "]";
 
-					// 주소를 짧은 정수로 출력
+					// 주소를 짧은 정수로 출력 (앞 부분은 대부분 동일하기때문에 뒷부분만 출력)
 					cout << "[" << reinterpret_cast<uintptr_t>(current) % 100000 << ", "
 						<< current->item << ", "
 						<< reinterpret_cast<uintptr_t>(current->next) % 100000 << "]";

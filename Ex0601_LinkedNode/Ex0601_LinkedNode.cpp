@@ -7,9 +7,9 @@ struct Node
 	int item = 0;	  // <- 큰 데이터도 가능
 	Node* next = nullptr;
 
-	friend ostream& operator<<(ostream& os, const Node& pos)
+	friend ostream& operator<<(ostream& os, const Node& n)
 	{
-		cout << pos.item << " " << flush;
+		cout << n.item << " " << flush;
 		return os;
 	}
 };
@@ -63,11 +63,9 @@ int main()
 	cout << endl;
 
 	// 연결 관계 만들어 주기
-	//first->next = second;
-	//second->next = third;
-	//third->next = fourth;
-	//fourth->next = fifth;
-	//fifth->next = nullptr; // 마지막
+	// first->next = second;
+	// TODO:
+	// 마지막
 
 	//cout << *(first) << endl;
 	//cout << *(first->next) << endl;
@@ -81,29 +79,9 @@ int main()
 	// 임시 변수 사용
 	//{
 	//	Node* current = first;
-
 	//	cout << *current << endl;
 
-	//	current = current->next;
-
-	//	cout << *current << endl;
-
-	//	current = current->next;
-
-	//	cout << *current << endl;
-
-	//	current = current->next;
-
-	//	cout << *current << endl;
-
-	//	current = current->next;
-
-	//	cout << *current << endl;
-
-	//	current = current->next;
-
-	//	// cout << *current << endl; // 오류
-
+	// TODO:
 	//	cout << endl;
 	//}
 
@@ -114,6 +92,8 @@ int main()
 	// 반복문 이용
 	//IterPrint(first);
 	//cout << endl;
+
+	// TODO: 데이터 삭제
 
 	return 0;
 }

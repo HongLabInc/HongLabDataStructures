@@ -8,7 +8,7 @@ int main()
 {
 	SinglyLinkedList<int> list;
 
-	list.SetPrintDebug(true);
+	list.SetPrintDebug(false);
 
 	list.PushFront(3);
 	list.PushBack(4);
@@ -21,7 +21,7 @@ int main()
 	// copy constructor
 	{
 		SinglyLinkedList<int> list2 = list; // copy constructor
-		list2.SetPrintDebug(true);
+		list2.SetPrintDebug(false);
 		list2.Print();
 	}
 
@@ -30,6 +30,11 @@ int main()
 
 	SinglyLinkedList<int>::Node* temp = list.Find(3);
 	list.InsertBack(temp, 1000);
+	list.Print();
+
+	list.InsertBack(temp, 50);
+	list.Print();
+	list.Remove(temp);
 	list.Print();
 
 	// PopFront()/Back() Å×½ºÆ®
