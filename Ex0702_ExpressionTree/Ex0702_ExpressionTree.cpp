@@ -32,6 +32,7 @@ public:
 	int Evaluate(Node* node)
 	{
 		// TODO: 트리에 저장된 수식의 결과값을 계산
+		return 0;
 	}
 
 	void Infix() { Infix(root_); cout << endl; }
@@ -119,13 +120,16 @@ int main()
 
 	tree.Print2D();
 
+	// 수식 트리에 저장되어 있는 수식을 실제로 계산해서 그 결과를 출력합니다.
 	cout << "Evaluated = " << tree.Evaluate() << endl; // Evaluated = 9
 
+	// 수식 트리에 저장되어 있는 수식을 Infix 방식으로 출력합니다.
 	cout << "  Infix: ";
-	tree.Infix();   // (5+((3-2)*4))
+	tree.Infix();   // (5+((3-2)*4)) <- 출력 예시
 
+	// 수식 트리에 저장되어 있는 수식을 Postfix 방식으로 출력합니다.
 	cout << "Postfix: ";
-	tree.Postfix(); // 532-4*+
+	tree.Postfix(); // 532-4*+ <- 출력 예시
 
 	cout << endl;
 
@@ -134,10 +138,12 @@ int main()
 		// const char infix[] = "1+(1*2+3)*4";
 		const char infix[] = "(5+((3-2)*4))";
 
+		// 생성자에서 문자열로 입력받은 수식을 내부적으로 Infix->Postfix 과정을 거쳐 트리로 저장합니다.
 		ExpressionTree tree(infix);
 
 		tree.Print2D();
 
+		// 수식 트리에 저장되어 있는 수식을 실제로 계산해서 그 결과를 출력합니다.
 		cout << "Evaluated = " << tree.Evaluate() << endl; // Evaluated = 9
 	}
 
