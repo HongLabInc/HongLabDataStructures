@@ -70,7 +70,7 @@ public:
 		// TODO:
 	}
 
-private:
+protected: // 뒤에서 상속해서 사용
 	T* stack_ = nullptr;
 	int top_ = -1; // 0 아님
 	int capacity_ = 0;
