@@ -173,7 +173,7 @@ public:
 		print_debug_ = flag;
 	}
 
-protected:
+protected: // 뒤에서 상속해서 사용
 	T* queue_; // array for queue elements
 	int front_ = 0; // 시작 인덱스보다 하나 작은 값
 	int rear_ = 0; // 마지막 인덱스 (첫 값은 1에 추가)
