@@ -24,7 +24,7 @@ int main()
 	bst.Inorder(); // key에 대해 정렬된 순서로 출력
 
 	// 탐색
-	cout << bst.RecurGet(5)->value << endl;
+	cout << bst.RecurGet(5)->value << endl; // if(bst.RecurGet(5)) cout << bst.RecurGet(5)->value << endl;
 	cout << bst.RecurGet(3)->value << endl;
 	cout << bst.RecurGet(7)->value << endl;
 	cout << bst.RecurGet(1)->value << endl;
