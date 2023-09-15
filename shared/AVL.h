@@ -2,8 +2,6 @@
 
 #include "BinarySearchTree.h"
 
-// https://en.wikipedia.org/wiki/AVL_tree
-
 template<typename K, typename V>
 class AVL : public BinarySearchTree<K, V>
 {
