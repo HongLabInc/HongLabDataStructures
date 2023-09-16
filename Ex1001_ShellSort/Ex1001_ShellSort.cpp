@@ -86,20 +86,3 @@ int main()
 	// √÷æ« O(n^2), ∆Ú±’ O(n^1.5)
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-*/
-
-// https://en.wikipedia.org/wiki/Shellsort

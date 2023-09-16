@@ -56,7 +56,7 @@ void QuickSort(int arr[], int low, int high, int n) // 마지막 n은 출력용
 
 int main()
 {
-	int arr[] = { 4, 7, 2, 9, 7, 5, 8, 1, 4, 6 };
+	int arr[] = { 4, 17, 2, 9, 7, 5, 8, 1, 14, 6 };
 	int n = sizeof(arr) / sizeof(arr[0]);
 
 	cout << "         ";
