@@ -13,7 +13,7 @@ int main()
 	for (int i : { 5, 3, 7, 1, 4, 6, 8 })
 		//for (int i : { 9, 8, 7, 6, 5})
 	{
-		// bst.Insert(Item{ i, char('A' + i) });
+		// bst.Insert({ i, char('A' + i) }); // 참고: C++ 문법에서는 자료형의 이름 Item 생략하고 물결괄호 초기화 가능
 		bst.Insert(Item{ i, char('A' + i) });
 		bst.Print2D();
 	}
@@ -24,7 +24,7 @@ int main()
 	bst.Inorder(); // key에 대해 정렬된 순서로 출력
 
 	// 탐색
-	cout << bst.RecurGet(5)->value << endl;
+	cout << bst.RecurGet(5)->value << endl; // if(bst.RecurGet(5)) cout << bst.RecurGet(5)->value << endl;
 	cout << bst.RecurGet(3)->value << endl;
 	cout << bst.RecurGet(7)->value << endl;
 	cout << bst.RecurGet(1)->value << endl;
