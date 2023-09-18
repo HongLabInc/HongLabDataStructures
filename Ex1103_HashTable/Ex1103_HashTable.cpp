@@ -34,7 +34,7 @@ public:
 
 	V Get(const K& key)
 	{
-		// TODO:
+		// TODO: 못 찾으면 0을 반환
 
 		size_t index = key;
 		return table_[index].value;
@@ -69,6 +69,10 @@ private:
 
 int main()
 {
+	// 충돌 
+	// - 개방 주소법: 선형 조사법
+	// - 체이닝: 멤버 변수 Item* table_ 대신에 LinkedList<Item>* table_사용
+
 	// 키: int, 값: int 인 경우
 	// 키의 범위가 아주 크고 아이템의 개수는 적을 경우
 	{
@@ -82,9 +86,18 @@ int main()
 
 		cout << "Get 123 " << h.Get(123) << endl;
 
+		h.Insert(Item{ 1000021, 9898 });
+
+		h.Print();
+
+		cout << "Get 1000021 " << h.Get(1000021) << endl;
+
 		h.Insert(Item{ 1211, 999 }); // 충돌!
 
 		h.Print();
+
+		cout << "Get 123 " << h.Get(123) << endl;
+		cout << "Get 1211 " << h.Get(1211) << endl;
 	}
 
 	// 키: std::string, 값: int
@@ -93,25 +106,25 @@ int main()
 
 	//	HashTable<string, int> h(8);
 
-	//	h.Insert(Item{ "Apple", 1 });
-	//	h.Insert(Item{ "Orange", 2 });
-	//	h.Insert(Item{ "Mandarin", 4 });
+	//	h.Insert(Item{ "apple", 1 });
+	//	h.Insert(Item{ "orange", 2 });
+	//	h.Insert(Item{ "mandarin", 4 });
 
 	//	h.Print();
 
-	//	cout << "Apple " << h.Get("Apple") << endl;
-	//	cout << "Orange " << h.Get("Orange") << endl;
+	//	cout << "apple " << h.Get("apple") << endl;
+	//	cout << "orange " << h.Get("orange") << endl;
 	//	cout << endl;
 
 	//	h.Print();
 
-	//	h.Insert(Item{ "Pineapple", 5 });
+	//	h.Insert(Item{ "tomato", 4 });
 
-	//	h.Print(); // 충돌!
+	//	h.Print(); 
 
-	//	cout << "Apple " << h.Get("Apple") << endl;
-	//	cout << "Orange " << h.Get("Orange") << endl;
-	//	cout << "Pineapple " << h.Get("Pineapple") << endl;
+	//	cout << "apple " << h.Get("apple") << endl;
+	//	cout << "orange " << h.Get("orange") << endl;
+	//	cout << "pineapple " << h.Get("pineapple") << endl;
 	//	cout << endl;
 	//}
 
