@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.7.34024.191
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.34031.81
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Ex0101_Swap", "Ex0101_Swap\Ex0101_Swap.vcxproj", "{07BAEE20-FBAA-4B3F-B72F-D42D0C4FCD15}"
 EndProject
@@ -104,6 +104,10 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Ex1003_QuickSort", "Ex1003_QuickSort\Ex1003_QuickSort.vcxproj", "{0DF353FC-A964-4738-932F-A4CD125EEDA5}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Ex1004_RadixSort", "Ex1004_RadixSort\Ex1004_RadixSort.vcxproj", "{B5A62A36-D30C-4ED2-993A-D88DEA524791}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Chapter11", "Chapter11", "{D0BC7FEC-66D5-42B6-BCD6-9A587CB6E9CE}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Ex1101_InterpolationSearch", "Ex1101_InterpolationSearch\Ex1101_InterpolationSearch.vcxproj", "{082EB603-F58D-4A27-9DFA-51CA7B6B2BF8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -441,6 +445,14 @@ Global
 		{B5A62A36-D30C-4ED2-993A-D88DEA524791}.Release|x64.Build.0 = Release|x64
 		{B5A62A36-D30C-4ED2-993A-D88DEA524791}.Release|x86.ActiveCfg = Release|Win32
 		{B5A62A36-D30C-4ED2-993A-D88DEA524791}.Release|x86.Build.0 = Release|Win32
+		{082EB603-F58D-4A27-9DFA-51CA7B6B2BF8}.Debug|x64.ActiveCfg = Debug|x64
+		{082EB603-F58D-4A27-9DFA-51CA7B6B2BF8}.Debug|x64.Build.0 = Debug|x64
+		{082EB603-F58D-4A27-9DFA-51CA7B6B2BF8}.Debug|x86.ActiveCfg = Debug|Win32
+		{082EB603-F58D-4A27-9DFA-51CA7B6B2BF8}.Debug|x86.Build.0 = Debug|Win32
+		{082EB603-F58D-4A27-9DFA-51CA7B6B2BF8}.Release|x64.ActiveCfg = Release|x64
+		{082EB603-F58D-4A27-9DFA-51CA7B6B2BF8}.Release|x64.Build.0 = Release|x64
+		{082EB603-F58D-4A27-9DFA-51CA7B6B2BF8}.Release|x86.ActiveCfg = Release|Win32
+		{082EB603-F58D-4A27-9DFA-51CA7B6B2BF8}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -487,6 +499,7 @@ Global
 		{C88293BB-A30A-4C8D-A1F1-3D08E7E46125} = {6D6BCDFC-DD4E-47D2-9104-4C0E9686AFDA}
 		{0DF353FC-A964-4738-932F-A4CD125EEDA5} = {6D6BCDFC-DD4E-47D2-9104-4C0E9686AFDA}
 		{B5A62A36-D30C-4ED2-993A-D88DEA524791} = {6D6BCDFC-DD4E-47D2-9104-4C0E9686AFDA}
+		{082EB603-F58D-4A27-9DFA-51CA7B6B2BF8} = {D0BC7FEC-66D5-42B6-BCD6-9A587CB6E9CE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3AB1158A-C979-4ED3-B733-0E3D7B4FC727}
