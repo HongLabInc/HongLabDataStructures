@@ -1,12 +1,13 @@
 #include <iostream>
 #include <cassert>
 
+#include "../shared/Stack.h"
 #include "../shared/Queue.h"
 
 using namespace std;
 
 template<typename T>
-class AdjListGraph
+class AdjListGraph // Adjacent List Graph
 {
 public:
 	struct Vertex
@@ -52,7 +53,7 @@ public:
 	{
 		assert(u < n_ && v < n_);
 
-		Node* temp = new Node{ v, list_[u] }; // <- next = list_[u]
+		Node* temp = new Node{ v, list_[u] };
 		list_[u] = temp;
 	}
 
@@ -76,6 +77,7 @@ public:
 			cout << endl;
 		}
 
+		cout << endl;
 	}
 
 	void DepthFirstTraversal()
@@ -92,14 +94,13 @@ public:
 		// TODO:
 	}
 
+	void IterDFT()
+	{
+		// TODO:
+	}
+
 	void BreadthFirstTraversal()
 	{
-		int v = 0; // 0번에서 시작
-
-		Queue<int> q;
-
-		ResetVisited();
-
 		// TODO:
 	}
 
@@ -138,21 +139,11 @@ int main()
 	g.Print();
 
 	g.DepthFirstTraversal();
+	cout << endl;
+
+	g.IterDFT();
 
 	g.BreadthFirstTraversal();
 
 	return 0;
 }
-
-/*
-0 : 1 2
-1 : 3 4 0
-2 : 4 0
-3 : 6 1
-4 : 6 2 1
-5 : 6
-6 : 5 4 3
-
-0 1 3 6 5 4 2
-0 1 2 3 4 6 5
-*/

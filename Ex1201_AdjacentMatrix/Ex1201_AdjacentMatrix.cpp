@@ -7,7 +7,7 @@
 using namespace std;
 
 template<typename T>
-class AdjMatGraph
+class AdjMatGraph // Adjacent Matrix Graph
 {
 public:
 	struct Vertex // Node
@@ -68,6 +68,7 @@ public:
 	{
 		assert(u < n_ && v < n_);
 
+		// TODO:
 		matrix_[u][v] = 1;
 	}
 
@@ -86,6 +87,11 @@ public:
 	}
 
 	void DepthFirstTraversal(int v) // v´Â ÀÎµ¦½º
+	{
+		// TODO:
+	}
+
+	void IterDFT()
 	{
 		// TODO:
 	}
@@ -143,18 +149,3 @@ int main()
 
 	return 0;
 }
-
-/*
-
-0, 1, 1, 0, 0, 0, 0,
-1, 0, 0, 1, 1, 0, 0,
-1, 0, 0, 0, 1, 0, 0,
-0, 1, 0, 0, 0, 0, 1,
-0, 1, 1, 0, 0, 0, 1,
-0, 0, 0, 0, 0, 0, 1,
-0, 0, 0, 1, 1, 1, 0,
-
-0 1 3 6 4 2 5
-0 1 2 3 4 6 5
-
-*/
