@@ -16,7 +16,8 @@
 ## 예제 사용 방법
 - Visual Studio 2022 설정 제공 (HongLabDataStructures.sln 더블 클릭)
 - Visual Studio Code는 VSCode 폴더 사용 ([VSCode 사용법](https://youtu.be/uDq7woPOZ_A?si=3qoGEBENHcFFOttB))
+- 맥에서 VSCode 사용 시에는 tasks.json에 "-std=c++17" 과 "${fileDirname}/*.cpp" 추가해주세요. [샘플](https://github.com/HongLabInc/HongLabCppSummary/blob/main/.vscode_mac/tasks.json)
 
 ## 주의 사항
 - 사용자 이름이나 폴더에 한글 사용 금지 (시간 낭비 방지 차원입니다.)
-- [얼리버드] 맥OS에서는 강의 완결 후에 몰아서 테스트할 예정입니다. 혹시 맥 사용하시다가 문제 생기면 언제든지 강의 화면 오른쪽 위의 Discussion으로 알려주세요.
+
