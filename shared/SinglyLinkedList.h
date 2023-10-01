@@ -69,14 +69,7 @@ public:
 
 	void InsertBack(Node* node, T item)
 	{
-		if (IsEmpty())
-		{
-			// TODO:
-		}
-		else
-		{
-			// TODO:
-		}
+		// TODO:
 	}
 
 	void Remove(Node* n)
