@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <iomanip>
 #include <math.h>
 
@@ -42,7 +42,7 @@ int Partition(int arr[], int low, int high, int n)
 	}
 }
 
-void QuickSort(int arr[], int low, int high, int n) // ¸¶Áö¸· nÀº Ãâ·Â¿ë
+void QuickSort(int arr[], int low, int high, int n) // ë§ˆì§€ë§‰ nì€ ì¶œë ¥ìš©
 {
 	if (low >= 0 && high >= 0 && low < high)
 	{

@@ -1,4 +1,4 @@
-#include "Polynomial.h"
+ï»¿#include "Polynomial.h"
 
 #include <cassert>
 #include <iostream>
@@ -6,18 +6,18 @@
 
 using namespace std;
 
-Polynomial::Polynomial(int max_degree) // ÆíÀÇ»ó ±âº»°ª »ç¿ë
+Polynomial::Polynomial(int max_degree) // í¸ì˜ìƒ ê¸°ë³¸ê°’ ì‚¬ìš©
 {
 	assert(max_degree > 0);
 
-	// - »ó¼öÇ× Æ÷ÇÔ
-	// - ¿¹: max_degree°¡ 2ÀÌ¸é c0*x^0 + c1*x^1 + c2*x^2 ÃÑ 3°³ÀÇ Ç×µé
+	// - ìƒìˆ˜í•­ í¬í•¨
+	// - ì˜ˆ: max_degreeê°€ 2ì´ë©´ c0*x^0 + c1*x^1 + c2*x^2 ì´ 3ê°œì˜ í•­ë“¤
 	capacity_ = max_degree + 1;
 
-	// µ¿Àû ¸Ş¸ğ¸® ÇÒ´ç
+	// ë™ì  ë©”ëª¨ë¦¬ í• ë‹¹
 	coeffs_ = new float[capacity_];
 
-	// 0À¸·Î ÃÊ±âÈ­
+	// 0ìœ¼ë¡œ ì´ˆê¸°í™”
 	for (int i = 0; i < capacity_; i++)
 		coeffs_[i] = 0.0f;
 }
@@ -42,14 +42,14 @@ int Polynomial::MaxDegree()
 
 void Polynomial::NewTerm(const float coef, const int exp)
 {
-	assert(exp < capacity_); // exp°¡ ³Ê¹« Å©¸é resize ÇÏµµ·Ï ±¸ÇöÇÒ ¼öµµ ÀÖÀ½
+	assert(exp < capacity_); // expê°€ ë„ˆë¬´ í¬ë©´ resize í•˜ë„ë¡ êµ¬í˜„í•  ìˆ˜ë„ ìˆìŒ
 
-	// TODO: ½¬¿ö¿ä
+	// TODO: ì‰¬ì›Œìš”
 }
 
 Polynomial Polynomial::Add(const Polynomial& poly)
 {
-	assert(poly.capacity_ == this->capacity_); // ¹®Á¦¸¦ ´Ü¼øÈ­ÇÏ±â À§ÇÑ °¡Á¤
+	assert(poly.capacity_ == this->capacity_); // ë¬¸ì œë¥¼ ë‹¨ìˆœí™”í•˜ê¸° ìœ„í•œ ê°€ì •
 
 	Polynomial temp(this->MaxDegree());
 
@@ -60,13 +60,13 @@ Polynomial Polynomial::Add(const Polynomial& poly)
 
 Polynomial Polynomial::Mult(const Polynomial& poly)
 {
-	assert(poly.capacity_ == this->capacity_); // ¹®Á¦¸¦ ´Ü¼øÈ­ÇÏ±â À§ÇÑ °¡Á¤
+	assert(poly.capacity_ == this->capacity_); // ë¬¸ì œë¥¼ ë‹¨ìˆœí™”í•˜ê¸° ìœ„í•œ ê°€ì •
 
-	// coeff_[i]°¡ 0.0f°¡ ¾Æ´Ñ °æ¿ì¿¡ ´ëÇØ¼­¸¸ °è»ê (°öÇÏ¸é 0ÀÌ µÇ±â ¶§¹®)
+	// coeff_[i]ê°€ 0.0fê°€ ì•„ë‹Œ ê²½ìš°ì— ëŒ€í•´ì„œë§Œ ê³„ì‚° (ê³±í•˜ë©´ 0ì´ ë˜ê¸° ë•Œë¬¸)
 
 	Polynomial temp(this->MaxDegree());
 
-	// TODO: Ç×»ó ÀÎµ¦½Ì ¿À·ù Á¶½É
+	// TODO: í•­ìƒ ì¸ë±ì‹± ì˜¤ë¥˜ ì¡°ì‹¬
 
 	return temp;
 }
@@ -76,21 +76,21 @@ float Polynomial::Eval(float x)
 	float temp = 0.0f;
 
 	// TODO:
-	// ÈùÆ® std::powf(2.0f, float(3)); // 2.0f^3.0f = 8.0f (2.0fÀÇ 3.0f Á¦°ö)
+	// íŒíŠ¸ std::powf(2.0f, float(3)); // 2.0f^3.0f = 8.0f (2.0fì˜ 3.0f ì œê³±)
 
 	return temp;
 }
 
 void Polynomial::Print()
 {
-	bool is_first = true; // ´õÇÏ±â Ãâ·Â½Ã È®ÀÎ¿ë
+	bool is_first = true; // ë”í•˜ê¸° ì¶œë ¥ì‹œ í™•ì¸ìš©
 
 	for (int i = 0; i < capacity_; i++)
 	{
-		if (coeffs_[i] != 0.0f) // ÁÖÀÇ: 0ÀÌ ¾Æ´Ñ Ç×µé¸¸ Ãâ·Â
+		if (coeffs_[i] != 0.0f) // ì£¼ì˜: 0ì´ ì•„ë‹Œ í•­ë“¤ë§Œ ì¶œë ¥
 		{
 			if (!is_first)
-				cout << " + "; // Ã¹ Ç×ÀÌ ¾Æ´Ï¶ó¸é »çÀÌ»çÀÌ¿¡ ´õÇÏ±â Ãâ·Â
+				cout << " + "; // ì²« í•­ì´ ì•„ë‹ˆë¼ë©´ ì‚¬ì´ì‚¬ì´ì— ë”í•˜ê¸° ì¶œë ¥
 
 			cout << coeffs_[i];
 

@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 
 using namespace std;
 
@@ -21,7 +21,7 @@ int main()
 	int keys[] = { 1, 13, 55 };
 	int kn = sizeof(keys) / sizeof(keys[0]);
 
-	int indices[] = { 0, 3, 6, n }; // ¸¶Áö¸·¿¡ n ÇÏ³ª ´õ Ãß°¡
+	int indices[] = { 0, 3, 6, n }; // ë§ˆì§€ë§‰ì— n í•˜ë‚˜ ë” ì¶”ê°€
 
 	for (int x : {1, 2, 8, 13, 22, 45, 55, 75, 88, 99, -1, 47, 101, 1000, 7, 10, 50, 60 })
 	{

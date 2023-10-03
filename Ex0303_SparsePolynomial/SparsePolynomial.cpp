@@ -1,4 +1,4 @@
-#include "SparsePolynomial.h"
+ï»¿#include "SparsePolynomial.h"
 
 #include <iostream>
 #include <cassert>
@@ -6,24 +6,24 @@
 
 using namespace std;
 
-// »õ·Î¿î Ç×À» Ãß°¡ÇÒ ¶§ ÀÚ±â À§Ä¡¸¦ Ã£¾Æ¼­ ³Ö¾îÁà¾ß ÇÔ
+// ìƒˆë¡œìš´ í•­ì„ ì¶”ê°€í•  ë•Œ ìê¸° ìœ„ì¹˜ë¥¼ ì°¾ì•„ì„œ ë„£ì–´ì¤˜ì•¼ í•¨
 
-// expÇ×ÀÌ ÀÌ¹Ì Á¸ÀçÇÏ¸é °Å±â¿¡ coef¸¦ ´õÇØÁØ´Ù.
-// Á¸ÀçÇÏÁö ¾Ê´Â´Ù¸é exp ¿À¸§ Â÷¼øÀ¸·Î Á¤·ÄµÈ »óÅÂ·Î »õ·Î Ãß°¡ÇÑ´Ù.
+// expí•­ì´ ì´ë¯¸ ì¡´ì¬í•˜ë©´ ê±°ê¸°ì— coefë¥¼ ë”í•´ì¤€ë‹¤.
+// ì¡´ì¬í•˜ì§€ ì•ŠëŠ”ë‹¤ë©´ exp ì˜¤ë¦„ ì°¨ìˆœìœ¼ë¡œ ì •ë ¬ëœ ìƒíƒœë¡œ ìƒˆë¡œ ì¶”ê°€í•œë‹¤.
 void SparsePolynomial::NewTerm(float coef, int exp)
 {
-	if (coef == 0.0f) return; // 0ÀÌ¸é Ãß°¡ÇÏÁö ¾ÊÀ½
+	if (coef == 0.0f) return; // 0ì´ë©´ ì¶”ê°€í•˜ì§€ ì•ŠìŒ
 
 	if (num_terms_ >= capacity_)
 	{
-		// capacity Áõ°¡ (num_terms´Â ÀÏ´Ü °íÁ¤)
-		capacity_ = capacity_ > 0 ? capacity_ * 2 : 1; // 2¹è¾¿ Áõ°¡
+		// capacity ì¦ê°€ (num_termsëŠ” ì¼ë‹¨ ê³ ì •)
+		capacity_ = capacity_ > 0 ? capacity_ * 2 : 1; // 2ë°°ì”© ì¦ê°€
 		Term* new_term = new Term[capacity_];
 
-		// ¿ø·¡ °¡Áö°í ÀÖ´ø µ¥ÀÌÅÍ º¹»ç
+		// ì›ë˜ ê°€ì§€ê³  ìˆë˜ ë°ì´í„° ë³µì‚¬
 		memcpy(new_term, terms_, sizeof(Term) * num_terms_);
 
-		// ¸Ş¸ğ¸® ±³Ã¼
+		// ë©”ëª¨ë¦¬ êµì²´
 		if (terms_) delete[] terms_;
 		terms_ = new_term;
 	}
@@ -45,14 +45,14 @@ float SparsePolynomial::Eval(float x)
 
 SparsePolynomial SparsePolynomial::Add(const SparsePolynomial& poly)
 {
-	// this¿Í polyÀÇ terms_°¡ expÀÇ ¿À¸§Â÷¼øÀ¸·Î Á¤·ÄµÇ¾î ÀÖ´Ù°í °¡Á¤
-	// ÇÏ³ªÀÇ ´ÙÇ×½Ä ¾È¿¡ exp°¡ Áßº¹µÇ´Â termÀÌ ¾ø´Ù¶ó°í °¡Á¤ (ÇÑ exp´Â ÇÏ³ªÀÇ term¸¸ Á¸Àç)
+	// thisì™€ polyì˜ terms_ê°€ expì˜ ì˜¤ë¦„ì°¨ìˆœìœ¼ë¡œ ì •ë ¬ë˜ì–´ ìˆë‹¤ê³  ê°€ì •
+	// í•˜ë‚˜ì˜ ë‹¤í•­ì‹ ì•ˆì— expê°€ ì¤‘ë³µë˜ëŠ” termì´ ì—†ë‹¤ë¼ê³  ê°€ì • (í•œ expëŠ” í•˜ë‚˜ì˜ termë§Œ ì¡´ì¬)
 
-	// °£´ÜÇÑ ¹æ¹ı (¸Ş¸ğ¸®¸¦ ´õ »ç¿ëÇÏ´Â ¹æ¹ı)
-	// - 1. ÃÖ´ë exp¸¦ Ã£´Â´Ù.
-	// - 2. ÇÊ¿äÇÑ Å©±âÀÇ PolynomialÀ» ¸¸µç´Ù. (Sparse ¾Æ´Ô)
-	// - 3. ´õÇÏ¸é¼­ Polynomial¿¡ ¾÷µ¥ÀÌÆ® ÇÑ´Ù. ±¸Á¶°¡ °íÁ¤µÇ¾î ÀÖ¾î¼­ ½±´Ù.
-	// - 4. PolynomialÀ» SparsePolynomial·Î º¯È¯ÇÑ´Ù.
+	// ê°„ë‹¨í•œ ë°©ë²• (ë©”ëª¨ë¦¬ë¥¼ ë” ì‚¬ìš©í•˜ëŠ” ë°©ë²•)
+	// - 1. ìµœëŒ€ expë¥¼ ì°¾ëŠ”ë‹¤.
+	// - 2. í•„ìš”í•œ í¬ê¸°ì˜ Polynomialì„ ë§Œë“ ë‹¤. (Sparse ì•„ë‹˜)
+	// - 3. ë”í•˜ë©´ì„œ Polynomialì— ì—…ë°ì´íŠ¸ í•œë‹¤. êµ¬ì¡°ê°€ ê³ ì •ë˜ì–´ ìˆì–´ì„œ ì‰½ë‹¤.
+	// - 4. Polynomialì„ SparsePolynomialë¡œ ë³€í™˜í•œë‹¤.
 
 	SparsePolynomial temp;
 
@@ -63,14 +63,14 @@ SparsePolynomial SparsePolynomial::Add(const SparsePolynomial& poly)
 
 void SparsePolynomial::Print()
 {
-	bool is_first = true; // ´õÇÏ±â Ãâ·Â½Ã È®ÀÎ¿ë
+	bool is_first = true; // ë”í•˜ê¸° ì¶œë ¥ì‹œ í™•ì¸ìš©
 
 	for (int i = 0; i < num_terms_; i++)
 	{
-		// 0ÀÌ ¾Æ´Ñ Ç×µé¸¸ °ñ¶ó¼­ Ãâ·ÂÇÒ ÇÊ¿ä°¡ ¾øÀ½
+		// 0ì´ ì•„ë‹Œ í•­ë“¤ë§Œ ê³¨ë¼ì„œ ì¶œë ¥í•  í•„ìš”ê°€ ì—†ìŒ
 
 		if (!is_first)
-			cout << " + "; // Ã¹ Ç×ÀÌ ¾Æ´Ï¶ó¸é »çÀÌ»çÀÌ¿¡ ´õÇÏ±â Ãâ·Â
+			cout << " + "; // ì²« í•­ì´ ì•„ë‹ˆë¼ë©´ ì‚¬ì´ì‚¬ì´ì— ë”í•˜ê¸° ì¶œë ¥
 
 		cout << terms_[i].coef;
 

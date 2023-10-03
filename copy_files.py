@@ -37,13 +37,17 @@ for sub in subdirs:
         # shutil.copy(f, "VSCode/" + f)
 
         if is_utf8_with_bom(f):
-            continue
+            shutil.copy(f, "VSCode/" + f)
+        else:
+            with open(f, 'r', encoding='cp949') as file:
+                content = file.read()
 
-        with open(f, 'r', encoding='cp949') as file:
-            content = file.read()
+            # 원본 파일도 인코딩 다시
+            with open(f, 'w', encoding='utf-8-sig') as file:
+                file.write(content)
 
-        with open("VSCode/" + f, 'w', encoding='utf-8-sig') as file:
-            file.write(content)
+            with open("VSCode/" + f, 'w', encoding='utf-8-sig') as file:
+                file.write(content)
 
 
 

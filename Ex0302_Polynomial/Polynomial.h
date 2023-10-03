@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 
 class Polynomial
 {
@@ -22,6 +22,6 @@ public:
 	void Print();
 
 private:
-	int capacity_ = 0; // Ç×»ó ¸ğµç Ç×(term)µéÀÌ ´Ù Â÷ ÀÖ´Â °ÍÀº ¾Æ´Ï±â ¶§¹®¿¡ size ´ë½Å capacity »ç¿ë
+	int capacity_ = 0; // í•­ìƒ ëª¨ë“  í•­(term)ë“¤ì´ ë‹¤ ì°¨ ìˆëŠ” ê²ƒì€ ì•„ë‹ˆê¸° ë•Œë¬¸ì— size ëŒ€ì‹  capacity ì‚¬ìš©
 	float* coeffs_ = nullptr;
 };

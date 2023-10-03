@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <string> // std::string
 
 using namespace std;
@@ -28,19 +28,19 @@ public:
 	{
 		// TODO:
 
-		size_t index = item.key; // Å°¸¦ ÀÎµ¦½º·Î »ç¿ë
+		size_t index = item.key; // í‚¤ë¥¼ ì¸ë±ìŠ¤ë¡œ ì‚¬ìš©
 		table_[index] = item;
 	}
 
 	V Get(const K& key)
 	{
-		// TODO: ¸ø Ã£À¸¸é 0À» ¹İÈ¯
+		// TODO: ëª» ì°¾ìœ¼ë©´ 0ì„ ë°˜í™˜
 
 		size_t index = key;
 		return table_[index].value;
 	}
 
-	// Á¤¼ö -> ÇØ½¬°ª
+	// ì •ìˆ˜ -> í•´ì‰¬ê°’
 	size_t HashFunc(const int& key)
 	{
 		// TODO:
@@ -48,7 +48,7 @@ public:
 		return key;
 	}
 
-	// ¹®ÀÚ¿­À» Á¤¼ö ÀÎµ¦½º(ÇØ½¬°ª)·Î º¯È¯
+	// ë¬¸ìì—´ì„ ì •ìˆ˜ ì¸ë±ìŠ¤(í•´ì‰¬ê°’)ë¡œ ë³€í™˜
 	// Horner's method
 	//size_t HashFunc(const string& s)
 	//{
@@ -69,12 +69,12 @@ private:
 
 int main()
 {
-	// Ãæµ¹ 
-	// - °³¹æ ÁÖ¼Ò¹ı: ¼±Çü Á¶»ç¹ı
-	// - Ã¼ÀÌ´×: ¸â¹ö º¯¼ö Item* table_ ´ë½Å¿¡ LinkedList<Item>* table_»ç¿ë
+	// ì¶©ëŒ 
+	// - ê°œë°© ì£¼ì†Œë²•: ì„ í˜• ì¡°ì‚¬ë²•
+	// - ì²´ì´ë‹: ë©¤ë²„ ë³€ìˆ˜ Item* table_ ëŒ€ì‹ ì— LinkedList<Item>* table_ì‚¬ìš©
 
-	// Å°: int, °ª: int ÀÎ °æ¿ì
-	// Å°ÀÇ ¹üÀ§°¡ ¾ÆÁÖ Å©°í ¾ÆÀÌÅÛÀÇ °³¼ö´Â ÀûÀ» °æ¿ì
+	// í‚¤: int, ê°’: int ì¸ ê²½ìš°
+	// í‚¤ì˜ ë²”ìœ„ê°€ ì•„ì£¼ í¬ê³  ì•„ì´í…œì˜ ê°œìˆ˜ëŠ” ì ì„ ê²½ìš°
 	{
 		using Item = HashTable<int, int>::Item;
 
@@ -92,7 +92,7 @@ int main()
 
 		cout << "Get 1000021 " << h.Get(1000021) << endl;
 
-		h.Insert(Item{ 1211, 999 }); // Ãæµ¹!
+		h.Insert(Item{ 1211, 999 }); // ì¶©ëŒ!
 
 		h.Print();
 
@@ -100,7 +100,7 @@ int main()
 		cout << "Get 1211 " << h.Get(1211) << endl;
 	}
 
-	// Å°: std::string, °ª: int
+	// í‚¤: std::string, ê°’: int
 	//{
 	//	using Item = HashTable<string, int>::Item;
 

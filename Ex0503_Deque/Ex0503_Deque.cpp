@@ -1,10 +1,10 @@
-#include "../shared/Deque.h"
+Ôªø#include "../shared/Deque.h"
 
 #include <iostream>
 
 int main()
 {
-	// Double Ended Queue (µ¶)
+	// Double Ended Queue (Îç±)
 	Deque<char> d(8);
 
 	d.SetDebugFlag(true);

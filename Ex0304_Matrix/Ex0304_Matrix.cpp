@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 
 #include "Matrix.h"
 
@@ -19,12 +19,12 @@ int main()
 
 	cout << endl;
 
-	Matrix add = m1.Add(m1); // ÀÚ±â ÀÚ½Å°ú ´õÇÏ±â
+	Matrix add = m1.Add(m1); // ìžê¸° ìžì‹ ê³¼ ë”í•˜ê¸°
 	add.Print();
 
 	cout << endl;
 
-	Matrix tr = m1.Transpose(); // ÀüÄ¡Çà·Ä
+	Matrix tr = m1.Transpose(); // ì „ì¹˜í–‰ë ¬
 	tr.Print();
 
 	return 0;

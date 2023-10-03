@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 
 #include "../shared/BinarySearchTree.h"
 
@@ -13,24 +13,24 @@ int main()
 	for (int i : { 5, 3, 7, 1, 4, 6, 8 })
 		//for (int i : { 9, 8, 7, 6, 5})
 	{
-		// bst.Insert({ i, char('A' + i) }); // Âü°í: C++ ¹®¹ı¿¡¼­´Â ÀÚ·áÇüÀÇ ÀÌ¸§ Item »ı·«ÇÏ°í ¹°°á°ıÈ£ ÃÊ±âÈ­ °¡´É
+		// bst.Insert({ i, char('A' + i) }); // ì°¸ê³ : C++ ë¬¸ë²•ì—ì„œëŠ” ìë£Œí˜•ì˜ ì´ë¦„ Item ìƒëµí•˜ê³  ë¬¼ê²°ê´„í˜¸ ì´ˆê¸°í™” ê°€ëŠ¥
 		bst.Insert(Item{ i, char('A' + i) });
 		bst.Print2D();
 	}
 
-	bst.Insert({ 6, 'Z' }); // Å° °ªÀÌ °°À¸¸é µ¤¾î¾´´Ù.
+	bst.Insert({ 6, 'Z' }); // í‚¤ ê°’ì´ ê°™ìœ¼ë©´ ë®ì–´ì“´ë‹¤.
 	bst.Print2D();
 
-	bst.Inorder(); // key¿¡ ´ëÇØ Á¤·ÄµÈ ¼ø¼­·Î Ãâ·Â
+	bst.Inorder(); // keyì— ëŒ€í•´ ì •ë ¬ëœ ìˆœì„œë¡œ ì¶œë ¥
 
-	// Å½»ö
+	// íƒìƒ‰
 	cout << bst.RecurGet(5)->value << endl; // if(bst.RecurGet(5)) cout << bst.RecurGet(5)->value << endl;
 	cout << bst.RecurGet(3)->value << endl;
 	cout << bst.RecurGet(7)->value << endl;
 	cout << bst.RecurGet(1)->value << endl;
 	cout << bst.RecurGet(4)->value << endl;
 
-	bst.Remove(999); // ¾ø´Â Å°¿¡´ëÇØ »èÁ¦
+	bst.Remove(999); // ì—†ëŠ” í‚¤ì—ëŒ€í•´ ì‚­ì œ
 	bst.Print2D();
 
 	for (int i : {5, 4, 7, 3})

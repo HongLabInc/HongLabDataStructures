@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 
 #include "Queue.h"
 
@@ -6,7 +6,7 @@
 #include <iostream>
 #include <iomanip>
 
-// Double Ended Queue (µ¦, dequeue¿Í ±¸ºĞ)
+// Double Ended Queue (ë±, dequeueì™€ êµ¬ë¶„)
 template<typename T>
 class Deque : public Queue<T>
 {
@@ -55,5 +55,5 @@ public:
 	}
 
 private:
-	// Queue¿Í µ¿ÀÏ
+	// Queueì™€ ë™ì¼
 };

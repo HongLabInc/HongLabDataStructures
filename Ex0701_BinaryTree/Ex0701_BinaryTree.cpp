@@ -1,42 +1,42 @@
-#include <iostream>
+ï»¿#include <iostream>
 
 #include "../shared/BinaryTree.h"
 
 using namespace std;
 
 /*
-[¿ë¾î]
-- ¼±Çü ÀÚ·á±¸Á¶ vs ºñ¼±Çü ÀÚ·á±¸Á¶
-- Æ®¸®(tree), ¼­ºêÆ®¸®(subtree)
-- ³ëµå(node), ·çÆ®(root) ³ëµå,
-- ºÎ¸ğ ³ëµå, ÀÚ½Ä ³ëµå, ÇüÁ¦(sibling) ³ëµå, Á¶»ó(ancestor) ³ëµå, ÈÄ¼Õ(descendent) ³ëµå
-- ´Ü¸» ³ëµå(terminal node, leaf node), ºñ´Ü¸» ³ëµå(nonterminal node)
-- ³ëµåÀÇ Â÷¼ö(degree): ÀÚ½Ä ³ëµåÀÇ °³¼ö
-- Æ®¸®ÀÇ Â÷¼ö: ³ëµåµéÀÇ Â÷¼ö Áß °¡Àå Å« Â÷¼ö
-- ·¹º§(·çÆ®ÀÇ ·¹º§Àº 1), ±íÀÌ, ³ôÀÌ https://stackoverflow.com/questions/2603692/what-is-the-difference-between-tree-depth-and-height
-- ³ôÀÌ: ÃÖ´ë ·¹º§
-- °£¼±(edge)
-- ÀÌÁø Æ®¸®: ¸ğµç ³ëµåÀÇ Â÷¼ö°¡ 2 ÀÌÇÏ (ÃÖ´ë 2°³ÀÇ ÀÚ½Ä ³ëµå)
-- Æ÷È­ ÀÌÁø Æ®¸®(full binary tree): ¸ğµç ³ëµå°¡ °¡µæ Â÷ ÀÖ´Â Æ®¸®
-- ¿ÏÀü ÀÌÁø Æ®¸®(complete binary tree): ¸¶Áö¸· ·¹º§ ¿Ü¿¡´Â ¸ğµÎ ´Ù Â÷ÀÖ°í ¸¶Áö¸· ·¹º§Àº ¿ŞÂÊºÎÅÍ Â÷ÀÖ´Â Æ®¸® (Áß°£ ºó°÷ X)
+[ìš©ì–´]
+- ì„ í˜• ìë£Œêµ¬ì¡° vs ë¹„ì„ í˜• ìë£Œêµ¬ì¡°
+- íŠ¸ë¦¬(tree), ì„œë¸ŒíŠ¸ë¦¬(subtree)
+- ë…¸ë“œ(node), ë£¨íŠ¸(root) ë…¸ë“œ,
+- ë¶€ëª¨ ë…¸ë“œ, ìì‹ ë…¸ë“œ, í˜•ì œ(sibling) ë…¸ë“œ, ì¡°ìƒ(ancestor) ë…¸ë“œ, í›„ì†(descendent) ë…¸ë“œ
+- ë‹¨ë§ ë…¸ë“œ(terminal node, leaf node), ë¹„ë‹¨ë§ ë…¸ë“œ(nonterminal node)
+- ë…¸ë“œì˜ ì°¨ìˆ˜(degree): ìì‹ ë…¸ë“œì˜ ê°œìˆ˜
+- íŠ¸ë¦¬ì˜ ì°¨ìˆ˜: ë…¸ë“œë“¤ì˜ ì°¨ìˆ˜ ì¤‘ ê°€ì¥ í° ì°¨ìˆ˜
+- ë ˆë²¨(ë£¨íŠ¸ì˜ ë ˆë²¨ì€ 1), ê¹Šì´, ë†’ì´ https://stackoverflow.com/questions/2603692/what-is-the-difference-between-tree-depth-and-height
+- ë†’ì´: ìµœëŒ€ ë ˆë²¨
+- ê°„ì„ (edge)
+- ì´ì§„ íŠ¸ë¦¬: ëª¨ë“  ë…¸ë“œì˜ ì°¨ìˆ˜ê°€ 2 ì´í•˜ (ìµœëŒ€ 2ê°œì˜ ìì‹ ë…¸ë“œ)
+- í¬í™” ì´ì§„ íŠ¸ë¦¬(full binary tree): ëª¨ë“  ë…¸ë“œê°€ ê°€ë“ ì°¨ ìˆëŠ” íŠ¸ë¦¬
+- ì™„ì „ ì´ì§„ íŠ¸ë¦¬(complete binary tree): ë§ˆì§€ë§‰ ë ˆë²¨ ì™¸ì—ëŠ” ëª¨ë‘ ë‹¤ ì°¨ìˆê³  ë§ˆì§€ë§‰ ë ˆë²¨ì€ ì™¼ìª½ë¶€í„° ì°¨ìˆëŠ” íŠ¸ë¦¬ (ì¤‘ê°„ ë¹ˆê³³ X)
 */
 
 int main()
 {
-	// ¹è¿­·Îµµ ±¸Çö °¡´É
+	// ë°°ì—´ë¡œë„ êµ¬í˜„ ê°€ëŠ¥
 
 	using Node = BinaryTree<int>::Node;
 
-	Node* n1 = new Node{ 1, nullptr, nullptr }; // ¹°°á°ıÈ£ ÃÊ±â°ª ³ª¿­ (»ı¼ºÀÚ ¾Æ´Ô)
+	Node* n1 = new Node{ 1, nullptr, nullptr }; // ë¬¼ê²°ê´„í˜¸ ì´ˆê¸°ê°’ ë‚˜ì—´ (ìƒì„±ì ì•„ë‹˜)
 	Node* n2 = new Node{ 2, n1, nullptr };
 	Node* n3 = new Node{ 3, nullptr, nullptr };
 	Node* n4 = new Node{ 4, nullptr, nullptr };
 	Node* n5 = new Node{ 5, nullptr, n4 };
 	Node* n6 = new Node{ 6, n2, n5 };
 
-	n1->right = n3; // <- ¿¬°á°ü°è º¯°æ
+	n1->right = n3; // <- ì—°ê²°ê´€ê³„ ë³€ê²½
 
-	BinaryTree<int> tree(n6); // <- n6ÀÇ ÁÖ¼Ò¸¦ root node·Î 
+	BinaryTree<int> tree(n6); // <- n6ì˜ ì£¼ì†Œë¥¼ root nodeë¡œ 
 
 	tree.Print2D();
 
@@ -74,7 +74,7 @@ int main()
 	tree.IterPostorder();
 	cout << endl;
 
-	// Æ®¸® ¼Ò¸êÀÚ¿¡¼­ »èÁ¦
+	// íŠ¸ë¦¬ ì†Œë©¸ìì—ì„œ ì‚­ì œ
 	//delete n1;
 	//delete n2;
 	//delete n3;

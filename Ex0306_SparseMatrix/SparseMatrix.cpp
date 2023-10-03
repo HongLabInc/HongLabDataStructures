@@ -1,4 +1,4 @@
-#include "SparseMatrix.h"
+ï»¿#include "SparseMatrix.h"
 
 #include <algorithm>
 #include <cassert>
@@ -11,7 +11,7 @@ SparseMatrix::SparseMatrix(int num_rows, int num_cols, int capacity)
 	// TODO:
 }
 
-// º¹»ç »ı¼ºÀÚ (b¸¦ º¹»ç)
+// ë³µì‚¬ ìƒì„±ì (bë¥¼ ë³µì‚¬)
 SparseMatrix::SparseMatrix(const SparseMatrix& b)
 {
 	// TODO:
@@ -24,12 +24,12 @@ SparseMatrix::~SparseMatrix()
 
 void SparseMatrix::SetValue(int row, int col, float value)
 {
-	if (value == 0.0f) return; // value°¡ 0ÀÌ ¾Æ´Ñ term¸¸ ÀúÀå
+	if (value == 0.0f) return; // valueê°€ 0ì´ ì•„ë‹Œ termë§Œ ì €ì¥
 
 	// TODO:
 }
 
-float SparseMatrix::GetValue(int row, int col) const // ¸Ç µÚÀÇ const´Â ÇÔ¼ö ¾È¿¡¼­ ¸â¹ö º¯¼öÀÇ °ªÀ» ¹Ù²ÙÁö ¾Ê°Ú´Ù´Â ÀÇ¹Ì
+float SparseMatrix::GetValue(int row, int col) const // ë§¨ ë’¤ì˜ constëŠ” í•¨ìˆ˜ ì•ˆì—ì„œ ë©¤ë²„ ë³€ìˆ˜ì˜ ê°’ì„ ë°”ê¾¸ì§€ ì•Šê² ë‹¤ëŠ” ì˜ë¯¸
 {
 	// TODO: key = col + num_cols * row;
 
@@ -38,7 +38,7 @@ float SparseMatrix::GetValue(int row, int col) const // ¸Ç µÚÀÇ const´Â ÇÔ¼ö ¾È¿
 
 SparseMatrix SparseMatrix::Transpose()
 {
-	SparseMatrix temp(num_cols_, num_rows_, capacity_); // num_cols_, num_rows_ ¼ø¼­ ÁÖÀÇ
+	SparseMatrix temp(num_cols_, num_rows_, capacity_); // num_cols_, num_rows_ ìˆœì„œ ì£¼ì˜
 
 	// TODO:
 

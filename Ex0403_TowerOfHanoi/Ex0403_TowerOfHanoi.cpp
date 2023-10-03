@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 
 #include "../shared/Stack.h"
 
@@ -17,23 +17,23 @@ void PrintTowers()
 	tower[2].Print();
 }
 
-// ½ÇÁ¦·Î µğ½ºÅ©¸¦ ¿òÁ÷¿©¼­ ½ºÅÃµéÀ» ¾÷µ¥ÀÌÆ®
+// ì‹¤ì œë¡œ ë””ìŠ¤í¬ë¥¼ ì›€ì§ì—¬ì„œ ìŠ¤íƒë“¤ì„ ì—…ë°ì´íŠ¸
 void MoveDisk(int from, int to)
 {
 	if (tower[from].IsEmpty())
 	{
 		cout << "Tower " << from << " is empty." << endl;
-		exit(0); // ¿À·ù °­Á¦ Á¾·á
+		exit(0); // ì˜¤ë¥˜ ê°•ì œ ì¢…ë£Œ
 	}
 
 	auto disk = tower[from].Top();
 
-	// ¹ŞÀ» Å¸¿ö°¡ ºñ¾î ÀÖÀ¸¸é ¹¹µçÁö ¹ŞÀ» ¼ö ÀÖÀ½
-	// ¾ËÆÄºª ¼ø¼­¿©¾ß ¹ŞÀ» ¼ö ÀÖÀ½ (¿ª¼ø X)
+	// ë°›ì„ íƒ€ì›Œê°€ ë¹„ì–´ ìˆìœ¼ë©´ ë­ë“ ì§€ ë°›ì„ ìˆ˜ ìˆìŒ
+	// ì•ŒíŒŒë²³ ìˆœì„œì—¬ì•¼ ë°›ì„ ìˆ˜ ìˆìŒ (ì—­ìˆœ X)
 	if (!tower[to].IsEmpty() && tower[to].Top() > disk)
 	{
 		cout << "Cannot place " << disk << " on " << tower[to].Top() << endl;
-		exit(0); // ¿À·ù °­Á¦ Á¾·á
+		exit(0); // ì˜¤ë¥˜ ê°•ì œ ì¢…ë£Œ
 	}
 
 	tower[from].Pop();
@@ -57,7 +57,7 @@ int main()
 
 	PrintTowers();
 
-	// MoveDisk(0, 2); // <- µğ½ºÅ© ÇÏ³ª¸¸ ¿òÁ÷ÀÌ´Â ÇÔ¼ö tower 0 -> tower 2
+	// MoveDisk(0, 2); // <- ë””ìŠ¤í¬ í•˜ë‚˜ë§Œ ì›€ì§ì´ëŠ” í•¨ìˆ˜ tower 0 -> tower 2
 
 	RecurMoveDisks(num_disks, 0, 1, 2);
 

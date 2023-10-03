@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 
 #include <cassert>
 #include <iostream>
@@ -29,7 +29,7 @@ public:
 
 	bool IsFull() const
 	{
-		// ¿øÇü Å¥¿¡¼­ ²Ë Ã¡´ÙÀÇ ±âÁØ
+		// ì›í˜• íì—ì„œ ê½‰ ì°¼ë‹¤ì˜ ê¸°ì¤€
 		return (rear_ + 1) % capacity_ == front_;
 	}
 
@@ -37,7 +37,7 @@ public:
 	{
 		assert(!IsEmpty());
 
-		return queue_[(front_ + 1) % capacity_]; // ÁÖÀÇ + 1
+		return queue_[(front_ + 1) % capacity_]; // ì£¼ì˜ + 1
 	}
 
 	T& Rear() const
@@ -49,9 +49,9 @@ public:
 
 	int Size() const
 	{
-		// ÇÏ³ªÇÏ³ª ¼¼´Â ¹æ¹ý º¸´Ù´Â °æ¿ì¸¦ µûÁ®¼­ ¹Ù·Î °è»êÇÏ´Â °ÍÀÌ ºü¸¨´Ï´Ù.
+		// í•˜ë‚˜í•˜ë‚˜ ì„¸ëŠ” ë°©ë²• ë³´ë‹¤ëŠ” ê²½ìš°ë¥¼ ë”°ì ¸ì„œ ë°”ë¡œ ê³„ì‚°í•˜ëŠ” ê²ƒì´ ë¹ ë¦…ë‹ˆë‹¤.
 
-		// if-else-if-else·Î ±¸ÇöÇÏ´Â °æ¿ì
+		// if-else-if-elseë¡œ êµ¬í˜„í•˜ëŠ” ê²½ìš°
 		//if (...)
 		//	return ...;
 		//else if (...)
@@ -59,29 +59,29 @@ public:
 		//else
 		//	return 0;
 
-		// ¶Ç´Â if-else ÇÏ³ª·Îµµ ±¸Çö °¡´ÉÇÕ´Ï´Ù.
+		// ë˜ëŠ” if-else í•˜ë‚˜ë¡œë„ êµ¬í˜„ ê°€ëŠ¥í•©ë‹ˆë‹¤.
 		// if (...)
 		//	  return ...;
 		// else
 		//    return ...;
 
-		return 0; // TODO: ÀÓ½Ã
+		return 0; // TODO: ìž„ì‹œ
 	}
 
-	void Resize() // 2¹è¾¿ Áõ°¡
+	void Resize() // 2ë°°ì”© ì¦ê°€
 	{
-		// Á¶¾ð
-		// - »õ·Î¿î °³³äÀÌ Ç×»ó ±×·¸µí ¿øÇü Å¥µµ Ã³À½¿¡´Â ¾î·Æ°í ³ªÁß¿¡´Â ´ç¿¬ÇØÁý´Ï´Ù.
-		// - Ã³À½ °øºÎÇÏ½Ç ¶§ ´äÀ» ¸ÂÃß·Á°í ÇÏÁö ¸¶½Ã°í "¾î¶»°Ô µð¹ö±ëÀ» Àß ÇÒ±î?"¸¦ Ã£À¸¼¼¿ä.
-		// - ºÎÁö·±È÷ ¿©·¯°¡Áö Ãâ·ÂÇØº¸°í "Ãâ·ÂÇÏ´Â µµ±¸(¿¹: ¹è¿­ Ãâ·Â)"µµ ¸¸µé¾î¼­ »ç¿ëÇØº¸°í
-		// - ¸Ó¸®µµ ¾²°í °í¹Îµµ ÇÏ´Ù º¸¸é ÀÎ»ýÀ» ÁöÅÊÇØÁÙ ´É·ÂÀ» °®Ãß°Ô µË´Ï´Ù.
-		// - Èûµé¸é µð½ºÄÚµå¿¡¼­ Á¶±Ý¾¿ µµ¿ò ¹ÞÀ¸½Ã´Â °Íµµ ÁÁ¾Æ¿ä.
+		// ì¡°ì–¸
+		// - ìƒˆë¡œìš´ ê°œë…ì´ í•­ìƒ ê·¸ë ‡ë“¯ ì›í˜• íë„ ì²˜ìŒì—ëŠ” ì–´ë µê³  ë‚˜ì¤‘ì—ëŠ” ë‹¹ì—°í•´ì§‘ë‹ˆë‹¤.
+		// - ì²˜ìŒ ê³µë¶€í•˜ì‹¤ ë•Œ ë‹µì„ ë§žì¶”ë ¤ê³  í•˜ì§€ ë§ˆì‹œê³  "ì–´ë–»ê²Œ ë””ë²„ê¹…ì„ ìž˜ í• ê¹Œ?"ë¥¼ ì°¾ìœ¼ì„¸ìš”.
+		// - ë¶€ì§€ëŸ°ížˆ ì—¬ëŸ¬ê°€ì§€ ì¶œë ¥í•´ë³´ê³  "ì¶œë ¥í•˜ëŠ” ë„êµ¬(ì˜ˆ: ë°°ì—´ ì¶œë ¥)"ë„ ë§Œë“¤ì–´ì„œ ì‚¬ìš©í•´ë³´ê³ 
+		// - ë¨¸ë¦¬ë„ ì“°ê³  ê³ ë¯¼ë„ í•˜ë‹¤ ë³´ë©´ ì¸ìƒì„ ì§€íƒ±í•´ì¤„ ëŠ¥ë ¥ì„ ê°–ì¶”ê²Œ ë©ë‹ˆë‹¤.
+		// - íž˜ë“¤ë©´ ë””ìŠ¤ì½”ë“œì—ì„œ ì¡°ê¸ˆì”© ë„ì›€ ë°›ìœ¼ì‹œëŠ” ê²ƒë„ ì¢‹ì•„ìš”.
 
-		// TODO: ÇÏ³ªÇÏ³ª º¹»çÇÏ´Â ¹æ½ÄÀº ½±°Ô ±¸ÇöÇÒ ¼ö ÀÖ½À´Ï´Ù. 
-		//       (µµÀü) °æ¿ì¸¦ ³ª´²¼­ memcpy()·Î ºí·° ´ÜÀ§·Î º¹»çÇÏ¸é ´õ È¿À²ÀûÀÔ´Ï´Ù.
+		// TODO: í•˜ë‚˜í•˜ë‚˜ ë³µì‚¬í•˜ëŠ” ë°©ì‹ì€ ì‰½ê²Œ êµ¬í˜„í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤. 
+		//       (ë„ì „) ê²½ìš°ë¥¼ ë‚˜ëˆ ì„œ memcpy()ë¡œ ë¸”ëŸ­ ë‹¨ìœ„ë¡œ ë³µì‚¬í•˜ë©´ ë” íš¨ìœ¨ì ìž…ë‹ˆë‹¤.
 	}
 
-	void Enqueue(const T& item) // ¸Ç µÚ¿¡ Ãß°¡, Push()
+	void Enqueue(const T& item) // ë§¨ ë’¤ì— ì¶”ê°€, Push()
 	{
 		if (IsFull())
 			Resize();
@@ -89,7 +89,7 @@ public:
 		// TODO:
 	}
 
-	void Dequeue() // Å¥ÀÇ Ã¹ ¿ä¼Ò »èÁ¦, Pop()
+	void Dequeue() // íì˜ ì²« ìš”ì†Œ ì‚­ì œ, Pop()
 	{
 		assert(!IsEmpty());
 
@@ -115,7 +115,7 @@ public:
 		cout << "Cap = " << capacity_ << ", Size = " << Size();
 		cout << endl;
 
-		// front¿Í rear À§Ä¡ Ç¥½Ã
+		// frontì™€ rear ìœ„ì¹˜ í‘œì‹œ
 		for (int i = 0; i < capacity_; i++) {
 			if (i == front_) cout << " F ";
 			else if (i == rear_) cout << " R ";
@@ -130,15 +130,15 @@ public:
 
 		if (front_ < rear_)
 		{
-			// front ¾Õ »ç¿ëÇÏÁö ¾ÊÀº °ø°£
+			// front ì•ž ì‚¬ìš©í•˜ì§€ ì•Šì€ ê³µê°„
 			for (int i = 0; i < front_ + 1; i++)
 				cout << " - ";
 
-			// ÀúÀåµÈ ³»¿ë¹°
+			// ì €ìž¥ëœ ë‚´ìš©ë¬¼
 			for (int i = front_ + 1; i <= rear_; i++)
 				cout << setw(2) << queue_[i] << " ";
 
-			// rear µÚ »ç¿ëÇÏÁö ¾ÊÀº °ø°£
+			// rear ë’¤ ì‚¬ìš©í•˜ì§€ ì•Šì€ ê³µê°„
 			for (int i = rear_ + 1; i < capacity_; i++)
 				cout << " * ";
 
@@ -146,21 +146,21 @@ public:
 		}
 		else if (front_ > rear_)
 		{
-			// rear ÀÌÀü¿¡ ÀúÀåµÈ ³»¿ë¹°
+			// rear ì´ì „ì— ì €ìž¥ëœ ë‚´ìš©ë¬¼
 			for (int i = 0; i <= rear_; i++)
 				cout << setw(2) << queue_[i] << " ";
 
-			// rear¿Í front »çÀÌ »ç¿ëÇÏÁö ¾ÊÀº °ø°£
+			// rearì™€ front ì‚¬ì´ ì‚¬ìš©í•˜ì§€ ì•Šì€ ê³µê°„
 			for (int i = rear_ + 1; i <= front_; i++)
 				cout << " * ";
 
-			// front µÚ ³»¿ë¹°
+			// front ë’¤ ë‚´ìš©ë¬¼
 			for (int i = front_ + 1; i < capacity_; i++)
 				cout << setw(2) << queue_[i] << " ";
 
 			cout << endl << endl;
 		}
-		else // ºñ¾úÀ» °æ¿ì
+		else // ë¹„ì—ˆì„ ê²½ìš°
 		{
 			for (int i = 0; i < capacity_; i++)
 				cout << " - ";
@@ -173,10 +173,10 @@ public:
 		print_debug_ = flag;
 	}
 
-protected: // µÚ¿¡¼­ »ó¼ÓÇØ¼­ »ç¿ë
+protected: // ë’¤ì—ì„œ ìƒì†í•´ì„œ ì‚¬ìš©
 	T* queue_; // array for queue elements
-	int front_ = 0; // ½ÃÀÛ ÀÎµ¦½ºº¸´Ù ÇÏ³ª ÀÛÀº °ª
-	int rear_ = 0; // ¸¶Áö¸· ÀÎµ¦½º (Ã¹ °ªÀº 1¿¡ Ãß°¡)
-	int capacity_; // ºó Ä­À» ÇÏ³ª µÖ¾ß ÇÏ±â ¶§¹®¿¡ ÇÊ¿ä ¸Þ¸ð¸®´Â ÃÖ´ë ÀúÀå·® + 1
+	int front_ = 0; // ì‹œìž‘ ì¸ë±ìŠ¤ë³´ë‹¤ í•˜ë‚˜ ìž‘ì€ ê°’
+	int rear_ = 0; // ë§ˆì§€ë§‰ ì¸ë±ìŠ¤ (ì²« ê°’ì€ 1ì— ì¶”ê°€)
+	int capacity_; // ë¹ˆ ì¹¸ì„ í•˜ë‚˜ ë‘¬ì•¼ í•˜ê¸° ë•Œë¬¸ì— í•„ìš” ë©”ëª¨ë¦¬ëŠ” ìµœëŒ€ ì €ìž¥ëŸ‰ + 1
 	bool print_debug_ = false;
 };

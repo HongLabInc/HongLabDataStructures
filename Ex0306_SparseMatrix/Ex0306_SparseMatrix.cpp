@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 
 #include "SparseMatrix.h"
 
@@ -6,9 +6,9 @@ int main()
 {
 	using namespace std;
 
-	SparseMatrix m1(4, 6, 6); // 4 by 6 matrix, Non-zero term 8°³
+	SparseMatrix m1(4, 6, 6); // 4 by 6 matrix, Non-zero term 8ê°œ
 
-	// Á¤·ÄµÇÁö ¾ÊÀº ¼ø¼­·Î Ãß°¡
+	// ì •ë ¬ë˜ì§€ ì•Šì€ ìˆœì„œë¡œ ì¶”ê°€
 	m1.SetValue(2, 3, 5.0f);
 	m1.SetValue(0, 5, 2.0f);
 	m1.SetValue(1, 1, 1.0f);
@@ -16,14 +16,14 @@ int main()
 	m1.SetValue(0, 3, 7.0f);
 	m1.SetValue(1, 2, 3.0f);
 
-	// m1.SetValue(2, 3, 4.0f); // <- µ¤¾î¾²´Â °æ¿ì
+	// m1.SetValue(2, 3, 4.0f); // <- ë®ì–´ì“°ëŠ” ê²½ìš°
 
 	m1.PrintTerms();
 	m1.Print();
 
 	cout << endl;
 
-	SparseMatrix tr = m1.Transpose(); // ÀüÄ¡Çà·Ä
+	SparseMatrix tr = m1.Transpose(); // ì „ì¹˜í–‰ë ¬
 
 	tr.PrintTerms();
 	tr.Print();

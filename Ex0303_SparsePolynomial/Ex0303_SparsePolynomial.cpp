@@ -1,4 +1,4 @@
-#include "SparsePolynomial.h"
+ï»¿#include "SparsePolynomial.h"
 
 #include <iostream>
 
@@ -6,13 +6,13 @@ int main()
 {
 	using namespace std;
 
-	// Èñ¼Ò ´ÙÇ×½Ä
-	// 1 + 2*x^10000000 À» ¾ÕÀÇ ¹æ½ÄÀ¸·Î´Â 10000000 + 1 Å©±âÀÇ ¹è¿­ÀÌ ÇÊ¿äÇÏÁö¸¸ 
-	// ¿©±â¼­´Â Term 2°³·Î °¡´É
+	// í¬ì†Œ ë‹¤í•­ì‹
+	// 1 + 2*x^10000000 ì„ ì•ì˜ ë°©ì‹ìœ¼ë¡œëŠ” 10000000 + 1 í¬ê¸°ì˜ ë°°ì—´ì´ í•„ìš”í•˜ì§€ë§Œ 
+	// ì—¬ê¸°ì„œëŠ” Term 2ê°œë¡œ ê°€ëŠ¥
 
-	SparsePolynomial p1; // max_degree´Â ±âº»°ªÀ¸·Î ¼³Á¤
+	SparsePolynomial p1; // max_degreeëŠ” ê¸°ë³¸ê°’ìœ¼ë¡œ ì„¤ì •
 
-	// exp°¡ ÀÛÀº Ç×ºÎÅÍ Ãß°¡ÇÑ´Ù°í °¡Á¤
+	// expê°€ ì‘ì€ í•­ë¶€í„° ì¶”ê°€í•œë‹¤ê³  ê°€ì •
 	p1.NewTerm(1.0f, 0);	// 1 * x^0 = 1
 	p1.NewTerm(1.5f, 1);	// 1.5 * x^1
 	p1.NewTerm(2.0f, 2);	// 2 * x^2
@@ -28,9 +28,9 @@ int main()
 	// Add() Test1
 	cout << "Add() Test" << endl;
 	{
-		SparsePolynomial p1; // max_degree´Â ±âº»°ªÀ¸·Î ¼³Á¤
+		SparsePolynomial p1; // max_degreeëŠ” ê¸°ë³¸ê°’ìœ¼ë¡œ ì„¤ì •
 
-		// exp°¡ ÀÛÀº Ç×ºÎÅÍ Ãß°¡ÇÑ´Ù°í °¡Á¤
+		// expê°€ ì‘ì€ í•­ë¶€í„° ì¶”ê°€í•œë‹¤ê³  ê°€ì •
 		p1.NewTerm(1.0f, 0);
 		p1.NewTerm(1.5f, 1);
 		p1.NewTerm(2.0f, 2);
@@ -39,7 +39,7 @@ int main()
 
 		SparsePolynomial p2;
 
-		// exp°¡ ÀÛÀº Ç×ºÎÅÍ Ãß°¡ÇÑ´Ù°í °¡Á¤
+		// expê°€ ì‘ì€ í•­ë¶€í„° ì¶”ê°€í•œë‹¤ê³  ê°€ì •
 		p2.NewTerm(1.0f, 1);
 		p2.NewTerm(3.0f, 2);
 		p2.NewTerm(5.0f, 7);
@@ -58,9 +58,9 @@ int main()
 	// Add() Test2
 	cout << "Add() Test2" << endl;
 	{
-		SparsePolynomial p1; // max_degree´Â ±âº»°ªÀ¸·Î ¼³Á¤
+		SparsePolynomial p1; // max_degreeëŠ” ê¸°ë³¸ê°’ìœ¼ë¡œ ì„¤ì •
 
-		// exp°¡ ÀÛÀº Ç×ºÎÅÍ Ãß°¡ÇÑ´Ù°í °¡Á¤
+		// expê°€ ì‘ì€ í•­ë¶€í„° ì¶”ê°€í•œë‹¤ê³  ê°€ì •
 		p1.NewTerm(1.0f, 0);
 		p1.NewTerm(1.5f, 1);
 		p1.NewTerm(2.0f, 2);
@@ -73,7 +73,7 @@ int main()
 
 		SparsePolynomial p2;
 
-		// exp°¡ ÀÛÀº Ç×ºÎÅÍ Ãß°¡ÇÑ´Ù°í °¡Á¤
+		// expê°€ ì‘ì€ í•­ë¶€í„° ì¶”ê°€í•œë‹¤ê³  ê°€ì •
 		p2.NewTerm(3.2f, 0);
 		p2.NewTerm(1.0f, 1);
 		p2.NewTerm(3.0f, 2);

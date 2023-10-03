@@ -1,4 +1,4 @@
-#include "Polynomial.h"
+ï»¿#include "Polynomial.h"
 
 #include <iostream>
 
@@ -6,7 +6,7 @@ int main()
 {
 	using namespace std;
 
-	Polynomial p1; // max_degree´Â ±âº»°ªÀ¸·Î ¼³Á¤
+	Polynomial p1; // max_degreeëŠ” ê¸°ë³¸ê°’ìœ¼ë¡œ ì„¤ì •
 
 	p1.NewTerm(1, 0);		// 1 * x^0 = 1
 	p1.NewTerm(1.5f, 1);	// 1.5 * x^1

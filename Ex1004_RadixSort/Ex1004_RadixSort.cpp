@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include "../shared/Queue.h"
 
 using namespace std;
@@ -39,7 +39,7 @@ int main()
 
 	Queue<int> queues[10];
 
-	int m = GetMax(arr, n); // °¡Àå Å« ÀÚ¸®¼ö¸¦ Ã£±â À§ÇØ¼­
+	int m = GetMax(arr, n); // ê°€ìž¥ í° ìžë¦¬ìˆ˜ë¥¼ ì°¾ê¸° ìœ„í•´ì„œ
 
 	for (int exp = 1; m / exp > 0; exp *= 10)
 	{

@@ -1,8 +1,8 @@
-#pragma once
+ï»¿#pragma once
 
 #include <iostream>
 #include <fstream>
-#include <string> // BinaryTree Ãâ·Â
+#include <string> // BinaryTree ì¶œë ¥
 
 #include "Queue.h"
 #include "Stack.h"
@@ -18,7 +18,7 @@ public:
 		Node* right = nullptr; // Right child
 	};
 
-	// µğ¹ö±ë µµ±¸: Å¥¿¡¼­ ÁÖ¼Ò ´ë½Å¿¡ ¾ÆÀÌÅÛ Ãâ·Â
+	// ë””ë²„ê¹… ë„êµ¬: íì—ì„œ ì£¼ì†Œ ëŒ€ì‹ ì— ì•„ì´í…œ ì¶œë ¥
 	class MyQueue : public Queue<Node*>
 	{
 	public:
@@ -32,7 +32,7 @@ public:
 		}
 	};
 
-	// µğ¹ö±ë µµ±¸: ½ºÅÃ¿¡¼­ ÁÖ¼Ò ´ë½Å¿¡ ¾ÆÀÌÅÛ Ãâ·Â
+	// ë””ë²„ê¹… ë„êµ¬: ìŠ¤íƒì—ì„œ ì£¼ì†Œ ëŒ€ì‹ ì— ì•„ì´í…œ ì¶œë ¥
 	class MyStack : public Stack<Node*>
 	{
 	public:
@@ -61,7 +61,7 @@ public:
 	void Visit(Node* node)
 	{
 		using namespace std;
-		cout << node->item << " "; // ¼öÇàÇÏ°í ½ÍÀº ÀÛ¾÷ ±¸Çö(¿©±â¼­´Â Ãâ·Â)
+		cout << node->item << " "; // ìˆ˜í–‰í•˜ê³  ì‹¶ì€ ì‘ì—… êµ¬í˜„(ì—¬ê¸°ì„œëŠ” ì¶œë ¥)
 	}
 
 	int Sum()
@@ -93,7 +93,7 @@ public:
 	{
 		if (node)
 		{
-			// TODO: ÈùÆ® Post-order
+			// TODO: íŒíŠ¸ Post-order
 		}
 	}
 
@@ -117,7 +117,7 @@ public:
 
 	void LevelOrder()
 	{
-		Queue<Node*> q; // ÈùÆ®: MyQueue q;
+		Queue<Node*> q; // íŒíŠ¸: MyQueue q;
 		Node* current = root_;
 		while (current)
 		{
@@ -130,7 +130,7 @@ public:
 	{
 		if (!root_) return;
 
-		Stack<Node*> s; // ÈùÆ®: MyStack q;
+		Stack<Node*> s; // íŒíŠ¸: MyStack q;
 		s.Push(root_);
 
 		while (!s.IsEmpty())
@@ -178,7 +178,7 @@ protected:
 	Node* root_ = nullptr;
 };
 
-// µğ¹ö±ë ÆíÀÇ µµ±¸
+// ë””ë²„ê¹… í¸ì˜ ë„êµ¬
 // https://stackoverflow.com/questions/36802354/print-binary-tree-in-a-pretty-way-using-c
 template<typename T>
 void BinaryTree<T>::Print2D()

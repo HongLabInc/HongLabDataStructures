@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 
 #include "../shared/AVL.h"
 
@@ -17,7 +17,7 @@ int main()
 		bst.Print2D();
 	}
 
-	bst.Inorder(); // key¿¡ ´ëÇØ Á¤·Ä
+	bst.Inorder(); // keyì— ëŒ€í•´ ì •ë ¬
 
 	cout << bst.RecurGet(5)->value << endl;
 	cout << bst.RecurGet(3)->value << endl;

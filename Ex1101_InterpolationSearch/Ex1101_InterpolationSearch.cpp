@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 
 using namespace std;
 
@@ -10,9 +10,9 @@ int InterpolationSearch(int arr[], int low, int high, int x)
 
 	if (low <= high && x >= arr[low] && x <= arr[high])
 	{
-		int pos = (low + high) / 2; // ÀÌÁø Å½»ö (Áß°£)
+		int pos = (low + high) / 2; // ì´ì§„ íƒìƒ‰ (ì¤‘ê°„)
 
-		// TODO: int pos = º¸°£ Å½»öÀ¸·Î ¼öÁ¤
+		// TODO: int pos = ë³´ê°„ íƒìƒ‰ìœ¼ë¡œ ìˆ˜ì •
 
 		if (arr[pos] == x)
 			return pos;

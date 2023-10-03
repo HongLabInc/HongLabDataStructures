@@ -1,10 +1,10 @@
-#include <iostream>
+ï»¿#include <iostream>
 
 using namespace std;
 
 struct Node
 {
-	int item = 0;	  // <- Å« µ¥ÀÌÅÍµµ °¡´É
+	int item = 0;	  // <- í° ë°ì´í„°ë„ ê°€ëŠ¥
 	Node* next = nullptr;
 
 	friend ostream& operator<<(ostream& os, const Node& n)
@@ -26,7 +26,7 @@ void IterPrint(Node* node)
 
 int main()
 {
-	// ListArray¿Í ºñ±³
+	// ListArrayì™€ ë¹„êµ
 
 	Node* first = nullptr;
 	first = new Node;
@@ -53,7 +53,7 @@ int main()
 	fifth->item = 5;
 	fifth->next = nullptr;
 
-	// °è¼Ó Ãß°¡ °¡´É
+	// ê³„ì† ì¶”ê°€ ê°€ëŠ¥
 
 	cout << *first << endl;
 	cout << *second << endl;
@@ -62,21 +62,21 @@ int main()
 	cout << *fifth << endl;
 	cout << endl;
 
-	// ¿¬°á °ü°è ¸¸µé¾î ÁÖ±â
+	// ì—°ê²° ê´€ê³„ ë§Œë“¤ì–´ ì£¼ê¸°
 	// first->next = second;
 	// TODO:
-	// ¸¶Áö¸·
+	// ë§ˆì§€ë§‰
 
 	//cout << *(first) << endl;
 	//cout << *(first->next) << endl;
 	//cout << *(first->next->next) << endl;
 	//cout << *(first->next->next->next) << endl;
 	//cout << *(first->next->next->next->next) << endl;
-	//// cout << *(first->next->next->next->next->next) << endl; // ¿À·ù
+	//// cout << *(first->next->next->next->next->next) << endl; // ì˜¤ë¥˜
 
 	cout << endl;
 
-	// ÀÓ½Ã º¯¼ö »ç¿ë
+	// ì„ì‹œ ë³€ìˆ˜ ì‚¬ìš©
 	//{
 	//	Node* current = first;
 	//	cout << *current << endl;
@@ -85,15 +85,15 @@ int main()
 	//	cout << endl;
 	//}
 
-	// Àç±Í È£Ãâ ÀÌ¿ë
+	// ì¬ê·€ í˜¸ì¶œ ì´ìš©
 	//RecurPrint(first);
 	//cout << endl;
 
-	// ¹İº¹¹® ÀÌ¿ë
+	// ë°˜ë³µë¬¸ ì´ìš©
 	//IterPrint(first);
 	//cout << endl;
 
-	// TODO: µ¥ÀÌÅÍ »èÁ¦
+	// TODO: ë°ì´í„° ì‚­ì œ
 
 	return 0;
 }

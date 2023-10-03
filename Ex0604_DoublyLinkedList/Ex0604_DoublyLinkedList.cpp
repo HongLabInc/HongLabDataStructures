@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 
 #include "../shared/DoublyLinkedList.h"
 
@@ -32,7 +32,7 @@ int main()
 	list.InsertBack(temp, 1000);
 	list.Print();
 
-	// PopFront()/Back() Å×½ºÆ®
+	// PopFront()/Back() í…ŒìŠ¤íŠ¸
 	for (int i = 0; i < 5; i++)
 	{
 		//list.PopFront();
@@ -45,7 +45,7 @@ int main()
 			cout << list.Front() << " " << list.Back() << endl;
 	}
 
-	// Edge case Å×½ºÆ® ÁÖÀÇ
+	// Edge case í…ŒìŠ¤íŠ¸ ì£¼ì˜
 
 	return 0;
 }

@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 
 #include <cassert>
 #include <stdint.h>
@@ -15,7 +15,7 @@ public:
 		Node* left = nullptr;
 		Node* right = nullptr;
 
-		// Âü°í: prev/next°¡ ¾Æ´Ï¶ó left/right
+		// ì°¸ê³ : prev/nextê°€ ì•„ë‹ˆë¼ left/right
 	};
 
 	DoublyLinkedList()
@@ -27,7 +27,7 @@ public:
 		Clear();
 	}
 
-	void Clear() // ¸ğµÎ Áö¿ö¾ß(delete) ÇÕ´Ï´Ù.
+	void Clear() // ëª¨ë‘ ì§€ì›Œì•¼(delete) í•©ë‹ˆë‹¤.
 	{
 		// TODO:
 	}
@@ -118,7 +118,7 @@ public:
 			return;
 		}
 
-		// ¸Ç µÚ¿¡¼­ ÇÏ³ª ¾ÕÀÇ ³ëµå¸¦ Ã£¾Æ¾ß ÇÕ´Ï´Ù.
+		// ë§¨ ë’¤ì—ì„œ í•˜ë‚˜ ì•ì˜ ë…¸ë“œë¥¼ ì°¾ì•„ì•¼ í•©ë‹ˆë‹¤.
 
 		assert(first_);
 

@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 
 struct Term
 {
@@ -11,7 +11,7 @@ class SparsePolynomial
 public:
 	SparsePolynomial()
 	{
-		// ¾Æ¹«°Íµµ ÇÏÁö ¾ÊÀ½ (µ¿ÀûÇÒ´ç ¸Ş¸ğ¸® ¾øÀÌ ½ÃÀÛ)
+		// ì•„ë¬´ê²ƒë„ í•˜ì§€ ì•ŠìŒ (ë™ì í• ë‹¹ ë©”ëª¨ë¦¬ ì—†ì´ ì‹œì‘)
 	}
 
 	~SparsePolynomial()
@@ -19,7 +19,7 @@ public:
 		if (terms_) delete[] terms_;
 	}
 
-	// »õ·Î¿î Ç×À» Ãß°¡ÇÒ ¶§ ÀÚ±â À§Ä¡¸¦ Ã£¾Æ¼­ ³Ö¾îÁà¾ß ÇÔ
+	// ìƒˆë¡œìš´ í•­ì„ ì¶”ê°€í•  ë•Œ ìê¸° ìœ„ì¹˜ë¥¼ ì°¾ì•„ì„œ ë„£ì–´ì¤˜ì•¼ í•¨
 	void NewTerm(float coef, int exp);
 
 	float Eval(float x);

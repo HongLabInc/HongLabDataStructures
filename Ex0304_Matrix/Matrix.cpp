@@ -1,4 +1,4 @@
-#include "Matrix.h"
+ï»¿#include "Matrix.h"
 
 #include <algorithm>
 #include <cassert>
@@ -11,7 +11,7 @@ Matrix::Matrix(int num_rows, int num_cols)
 	// TODO:
 }
 
-// º¹»ç »ı¼ºÀÚ (b¸¦ º¹»ç)
+// ë³µì‚¬ ìƒì„±ì (bë¥¼ ë³µì‚¬)
 Matrix::Matrix(const Matrix& b)
 {
 	// TODO:
@@ -27,14 +27,14 @@ void Matrix::SetValue(int row, int col, float value)
 	// values_[TODO] = value;
 }
 
-float Matrix::GetValue(int row, int col) const // ¸Ç µÚÀÇ const´Â ÇÔ¼ö ¾È¿¡¼­ ¸â¹ö º¯¼öÀÇ °ªÀ» ¹Ù²ÙÁö ¾Ê°Ú´Ù´Â ÀÇ¹Ì
+float Matrix::GetValue(int row, int col) const // ë§¨ ë’¤ì˜ constëŠ” í•¨ìˆ˜ ì•ˆì—ì„œ ë©¤ë²„ ë³€ìˆ˜ì˜ ê°’ì„ ë°”ê¾¸ì§€ ì•Šê² ë‹¤ëŠ” ì˜ë¯¸
 {
 	return 0.0f;
 }
 
 Matrix Matrix::Transpose()
 {
-	Matrix temp(num_cols_, num_rows_); // num_cols_, num_rows_ ¼ø¼­ ÁÖÀÇ
+	Matrix temp(num_cols_, num_rows_); // num_cols_, num_rows_ ìˆœì„œ ì£¼ì˜
 
 	// TODO:
 

@@ -1,4 +1,4 @@
-#include "../shared/Queue.h"
+ï»¿#include "../shared/Queue.h"
 
 #include <iostream>
 
@@ -6,7 +6,7 @@ int main()
 {
 	// FIFO(First In First Out)
 
-	Queue<char> q(2); // capacity_ = 2¿¡¼­ ½ÃÀÛ (¸Ş¸ğ¸® Áõ°¡ È®ÀÎ)
+	Queue<char> q(2); // capacity_ = 2ì—ì„œ ì‹œì‘ (ë©”ëª¨ë¦¬ ì¦ê°€ í™•ì¸)
 
 	q.SetDebugFlag(true);
 

@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <iomanip>
 
 using namespace std;
@@ -33,13 +33,13 @@ void Merge(int init[], int merged[], int left, int mid, int right)
 	cout << " Right : ";
 	Print(init, mid + 1, right);
 
-	// ÀÎµ¦½º¸¦ 2°³ ÀÌ¿ëÇØ¼­ Á¤·ÄÇÏ¸é¼­ merge
+	// ì¸ë±ìŠ¤ë¥¼ 2ê°œ ì´ìš©í•´ì„œ ì •ë ¬í•˜ë©´ì„œ merge
 	// TODO:
 
-	// ³²Àº ³»¿ëµé º¹»ç
+	// ë‚¨ì€ ë‚´ìš©ë“¤ ë³µì‚¬
 	// TODO:
 
-	// merged -> init º¹»ç
+	// merged -> init ë³µì‚¬
 	for (l = left; l <= right; l++)
 		init[l] = merged[l];
 
@@ -64,11 +64,11 @@ void MergeSort(int arr[], int merged[], int left, int right)
 
 int main()
 {
-	//int arr[] = { 3, 4, 2, 1, 7, 5, 8, 9, 0, 6 }; // À§Å°ÇÇµð¾Æ ¿¹½Ã
+	//int arr[] = { 3, 4, 2, 1, 7, 5, 8, 9, 0, 6 }; // ìœ„í‚¤í”¼ë””ì•„ ì˜ˆì‹œ
 	int arr[] = { 38, 27, 43, 3, 9, 82, 10 }; // https://en.wikipedia.org/wiki/Merge_sort
 	int n = sizeof(arr) / sizeof(arr[0]);
 
-	int* merged = new int[n]; // Ãß°¡ ¸Þ¸ð¸® ÇÊ¿ä
+	int* merged = new int[n]; // ì¶”ê°€ ë©”ëª¨ë¦¬ í•„ìš”
 
 	Print(arr, 0, n - 1);
 	cout << endl;
@@ -80,6 +80,6 @@ int main()
 
 	delete[] merged;
 
-	// ½Ã°£ º¹Àâµµ: ÃÖ¾Ç, ÃÖ¼±, Æò±Õ ¸ðµÎ O(nlogn)
-	// °ø°£ º¹Àâµµ: O(n) Ãß°¡ °ø°£ ÇÊ¿ä
+	// ì‹œê°„ ë³µìž¡ë„: ìµœì•…, ìµœì„ , í‰ê·  ëª¨ë‘ O(nlogn)
+	// ê³µê°„ ë³µìž¡ë„: O(n) ì¶”ê°€ ê³µê°„ í•„ìš”
 }

@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 
 using namespace std;
 
@@ -23,28 +23,28 @@ public:
 	{
 		Node* next = node->right;
 
-		if (!next || node->right_thread) return next; // ¿À¸¥ÂÊ ¸µÅ©°¡ ¾²·¹µå¶ó¸é ¹Ù·Î ¹İÈ¯
+		if (!next || node->right_thread) return next; // ì˜¤ë¥¸ìª½ ë§í¬ê°€ ì“°ë ˆë“œë¼ë©´ ë°”ë¡œ ë°˜í™˜
 
-		while (next->left) next = next->left; // Inorder ¿¹½Ã¶ó¼­ °¡Àå ¸¶Áö¸· left·Î ÀÌµ¿
+		while (next->left) next = next->left; // Inorder ì˜ˆì‹œë¼ì„œ ê°€ì¥ ë§ˆì§€ë§‰ leftë¡œ ì´ë™
 
-		return next; // (left°¡ ¾ø¾ú´Ù¸é right ¹İÈ¯) left°¡ ÀÖ¾ú´Ù¸é °¡Àå ¸¶Áö¸· left ¹İÈ¯
+		return next; // (leftê°€ ì—†ì—ˆë‹¤ë©´ right ë°˜í™˜) leftê°€ ìˆì—ˆë‹¤ë©´ ê°€ì¥ ë§ˆì§€ë§‰ left ë°˜í™˜
 	}
 
 	void Inorder() { Inorder(root_); }
 	void Inorder(Node* node)
 	{
-		while (node->left) node = node->left; // Inorder¶ó¼­ °¡Àå ¸¶Áö¸· left·Î ÀÌµ¿
+		while (node->left) node = node->left; // Inorderë¼ì„œ ê°€ì¥ ë§ˆì§€ë§‰ leftë¡œ ì´ë™
 
 		do
 		{
 			cout << node->data << " "; // Visit
-			node = Next(node); // ´ÙÀ½ ³ëµå¸¦ Ã£´Â´Ù
+			node = Next(node); // ë‹¤ìŒ ë…¸ë“œë¥¼ ì°¾ëŠ”ë‹¤
 		} while (node);
 
 		cout << endl;
 	}
 
-	/*void IterInorder() // ºñ±³ StackÀ» »ç¿ëÇÏ´Â Iterative Inorder()
+	/*void IterInorder() // ë¹„êµ Stackì„ ì‚¬ìš©í•˜ëŠ” Iterative Inorder()
 	{
 		if (!root_) return;
 
@@ -76,7 +76,7 @@ int main()
 {
 	using Node = ThreadedBinaryTree<int>::Node;
 
-	Node* n1 = new Node{ 1, nullptr, nullptr }; // ¹°°á°ıÈ£ ÃÊ±â°ª ³ª¿­ (»ı¼ºÀÚ ¾Æ´Ô)
+	Node* n1 = new Node{ 1, nullptr, nullptr }; // ë¬¼ê²°ê´„í˜¸ ì´ˆê¸°ê°’ ë‚˜ì—´ (ìƒì„±ì ì•„ë‹˜)
 	Node* n2 = new Node{ 2, n1, nullptr };
 	Node* n3 = new Node{ 3, nullptr, nullptr };
 	Node* n4 = new Node{ 4, nullptr, nullptr };

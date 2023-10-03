@@ -1,10 +1,10 @@
-#include "MyString.h"
+ï»¿#include "MyString.h"
 
 using namespace std;
 
 int main()
 {
-	// »ı¼ºÀÚ, MyString::Print()
+	// ìƒì„±ì, MyString::Print()
 	{
 		MyString str1("hi hay he hel hello llo ello el el o!");
 		str1.Print();
@@ -23,7 +23,7 @@ int main()
 		cout << "Found at " << MyString("ABCDEF").Find(MyString("EFGHIJ")) << endl;
 	}
 
-	// º¹»ç »ı¼ºÀÚ
+	// ë³µì‚¬ ìƒì„±ì
 	{
 		MyString str1("hi hay he hel hello llo ello el el o!");
 		MyString str2 = str1; // MyString str2(str1);

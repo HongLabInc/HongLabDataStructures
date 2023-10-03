@@ -1,13 +1,13 @@
-#pragma once
+ï»¿#pragma once
 
 #include <iostream>
 #include <algorithm> // swap
 #include <cassert>
 
-// Abstract Data Type °³³ä ¼Ò°³
-// º¸Ãæ: ¿ø·¡ ADT´Â Æ¯Á¤ ¾ğ¾î¿¡ Á¾¼ÓµÇ´Â °³³äÀº ¾Æ´Õ´Ï´Ù.
+// Abstract Data Type ê°œë… ì†Œê°œ
+// ë³´ì¶©: ì›ë˜ ADTëŠ” íŠ¹ì • ì–¸ì–´ì— ì¢…ì†ë˜ëŠ” ê°œë…ì€ ì•„ë‹™ë‹ˆë‹¤.
 
-/* Horowitz ±³Àç
+/* Horowitz êµì¬
 An abstract data type (ADT) is a data type
 that is organized in such a way that the specification of the operations
 on the objects is separated from the representation of the objects and
@@ -16,12 +16,12 @@ the implementation of the operations.
 
 /*
 
-class MyArray // °øºÎ¿ëÀº ÀÌ¸§¾Õ¿¡ My¸¦ ºÙ¿©¼­ È¥µ¿ ¹æÁö
+class MyArray // ê³µë¶€ìš©ì€ ì´ë¦„ì•ì— Myë¥¼ ë¶™ì—¬ì„œ í˜¼ë™ ë°©ì§€
 {
 public:
 	MyArray(int size);
 
-	~MyArray(); // ADT¶ó±â º¸´Ù´Â ¾ğ¾î Æ¯¼º
+	~MyArray(); // ADTë¼ê¸° ë³´ë‹¤ëŠ” ì–¸ì–´ íŠ¹ì„±
 
 	float Retrieve(int i);
 
@@ -37,9 +37,9 @@ private:
 class MyString
 {
 public:
-	MyString();						// ºñ¾î ÀÖ´Â MyString() »ı¼º
-	MyString(const char* init);		// ¸Ç µÚ¿¡ ³Î Ä³¸¯ÅÍ'\0'°¡ µé¾î ÀÖ´Â ¹®ÀÚ¿­·ÎºÎÅÍ ÃÊ±âÈ­
-	MyString(const MyString& str);	// MyStringÀÇ ´Ù¸¥ instance·ÎºÎÅÍ ÃÊ±âÈ­
+	MyString();						// ë¹„ì–´ ìˆëŠ” MyString() ìƒì„±
+	MyString(const char* init);		// ë§¨ ë’¤ì— ë„ ìºë¦­í„°'\0'ê°€ ë“¤ì–´ ìˆëŠ” ë¬¸ìì—´ë¡œë¶€í„° ì´ˆê¸°í™”
+	MyString(const MyString& str);	// MyStringì˜ ë‹¤ë¥¸ instanceë¡œë¶€í„° ì´ˆê¸°í™”
 	~MyString();
 
 	bool IsEmpty();
@@ -47,15 +47,15 @@ public:
 	int Length();
 	void Resize(int new_size);
 
-	MyString Substr(int start, int num);	// ÀÎµ¦½º startÀ§Ä¡ÀÇ ±ÛÀÚºÎÅÍ num°³ÀÇ ±ÛÀÚ·Î »õ·Î¿î ¹®ÀÚ¿­ ¸¸µé±â
-	MyString Concat(MyString app_str);		// µÚ¿¡ µ¡ºÙÀÎ »õ·Î¿î ¹®ÀÚ¿­ ¹İÈ¯ (append)
-	MyString Insert(MyString t, int start); // Áß°£¿¡ »ğÀÔ
+	MyString Substr(int start, int num);	// ì¸ë±ìŠ¤ startìœ„ì¹˜ì˜ ê¸€ìë¶€í„° numê°œì˜ ê¸€ìë¡œ ìƒˆë¡œìš´ ë¬¸ìì—´ ë§Œë“¤ê¸°
+	MyString Concat(MyString app_str);		// ë’¤ì— ë§ë¶™ì¸ ìƒˆë¡œìš´ ë¬¸ìì—´ ë°˜í™˜ (append)
+	MyString Insert(MyString t, int start); // ì¤‘ê°„ì— ì‚½ì…
 
 	int Find(MyString pat);
 
 	void Print();
 
 private:
-	char* str_ = nullptr; // ¸¶Áö¸·¿¡ '\0' ¾øÀ½
-	int size_ = 0; // ±ÛÀÚ ¼ö
+	char* str_ = nullptr; // ë§ˆì§€ë§‰ì— '\0' ì—†ìŒ
+	int size_ = 0; // ê¸€ì ìˆ˜
 };

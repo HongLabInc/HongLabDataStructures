@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 
 #include <iomanip>
 #include <cassert>
@@ -8,7 +8,7 @@ template<typename K, typename V>
 class BinarySearchTree
 {
 public:
-	struct Item // key¿Í valueÀÇ ½Ö(pair)
+	struct Item // keyì™€ valueì˜ ìŒ(pair)
 	{
 		K key = K();	// first
 		V value = V();	// second
@@ -65,7 +65,7 @@ public:
 
 	Item* RecurGet(Node* node, const K& key)
 	{
-		if (!node) return nullptr; // <- µ¿ÀÏÇÑ Å°¸¦ °¡Áø ³ëµå¸¦ Ã£Áö ¸øÇÏ¸é nullptrÀ» ¹İÈ¯ÇÏ´Â ±â´É
+		if (!node) return nullptr; // <- ë™ì¼í•œ í‚¤ë¥¼ ê°€ì§„ ë…¸ë“œë¥¼ ì°¾ì§€ ëª»í•˜ë©´ nullptrì„ ë°˜í™˜í•˜ëŠ” ê¸°ëŠ¥
 
 		if (key < node->item.key)
 			return RecurGet(node->left, key);
@@ -91,7 +91,7 @@ public:
 
 	Node* Insert(Node* node, const Item& item)
 	{
-		// ÈùÆ®: RecurGet()
+		// íŒíŠ¸: RecurGet()
 
 		// TODO:
 
@@ -153,7 +153,7 @@ protected:
 	Node* root_ = nullptr;
 };
 
-// µğ¹ö±ë ÆíÀÇ µµ±¸
+// ë””ë²„ê¹… í¸ì˜ ë„êµ¬
 // https://stackoverflow.com/questions/36802354/print-binary-tree-in-a-pretty-way-using-c
 template<typename K, typename V>
 void BinarySearchTree<K, V>::Print2D()

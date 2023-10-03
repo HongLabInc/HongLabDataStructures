@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 
 #include <cassert>
 #include <stdint.h>
@@ -19,7 +19,7 @@ public:
 
 	SinglyLinkedList(const SinglyLinkedList& list)
 	{
-		// TODO: ¿¬°á ¸®½ºÆ® º¹»ç
+		// TODO: ì—°ê²° ë¦¬ìŠ¤íŠ¸ ë³µì‚¬
 	}
 
 	~SinglyLinkedList()
@@ -27,9 +27,9 @@ public:
 		Clear();
 	}
 
-	void Clear() // ¸ğµÎ Áö¿ö¾ß(delete) ÇÕ´Ï´Ù.
+	void Clear() // ëª¨ë‘ ì§€ì›Œì•¼(delete) í•©ë‹ˆë‹¤.
 	{
-		// TODO: ¸ğµÎ »èÁ¦
+		// TODO: ëª¨ë‘ ì‚­ì œ
 	}
 
 	bool IsEmpty()
@@ -41,7 +41,7 @@ public:
 	{
 		int size = 0;
 
-		// TODO: size¸¦ ÇÏ³ªÇÏ³ª ¼¼¾î¼­ ¹İÈ¯
+		// TODO: sizeë¥¼ í•˜ë‚˜í•˜ë‚˜ ì„¸ì–´ì„œ ë°˜í™˜
 
 		return size;
 	}
@@ -50,19 +50,19 @@ public:
 	{
 		assert(first_);
 
-		return T(); // TODO: ¼öÁ¤
+		return T(); // TODO: ìˆ˜ì •
 	}
 
 	T Back()
 	{
 		assert(first_);
 
-		return T(); // TODO: ¼öÁ¤
+		return T(); // TODO: ìˆ˜ì •
 	}
 
 	Node* Find(T item)
 	{
-		// TODO: itemÀÌ µ¿ÀÏÇÑ ³ëµå Æ÷ÀÎÅÍ ¹İÈ¯
+		// TODO: itemì´ ë™ì¼í•œ ë…¸ë“œ í¬ì¸í„° ë°˜í™˜
 
 		return nullptr;
 	}
@@ -76,18 +76,18 @@ public:
 	{
 		assert(first_);
 
-		// ÇÏ³ª ¾ÕÀÇ ³ëµå¸¦ Ã£¾Æ¾ß ÇÕ´Ï´Ù.
+		// í•˜ë‚˜ ì•ì˜ ë…¸ë“œë¥¼ ì°¾ì•„ì•¼ í•©ë‹ˆë‹¤.
 		// TODO:
 	}
 
 	void PushFront(T item)
 	{
-		// first_°¡ nullptrÀÎ °æ¿ì¿Í ¾Æ´Ñ °æ¿ì ³ª´²¼­ »ı°¢ÇØº¸±â (°á±¹Àº µÎ °æ¿ì¸¦ ÇÏ³ª·Î ÇÕÄ¥ ¼ö ÀÖÀ½)
+		// first_ê°€ nullptrì¸ ê²½ìš°ì™€ ì•„ë‹Œ ê²½ìš° ë‚˜ëˆ ì„œ ìƒê°í•´ë³´ê¸° (ê²°êµ­ì€ ë‘ ê²½ìš°ë¥¼ í•˜ë‚˜ë¡œ í•©ì¹  ìˆ˜ ìˆìŒ)
 
-		// »õ·Î¿î ³ëµå ¸¸µé±â
+		// ìƒˆë¡œìš´ ë…¸ë“œ ë§Œë“¤ê¸°
 		// TODO:
 
-		// ¿¬°á °ü°è Á¤¸®
+		// ì—°ê²° ê´€ê³„ ì •ë¦¬
 		// TODO:
 	}
 
@@ -114,7 +114,7 @@ public:
 
 		assert(first_);
 
-		// TODO: ¸Ş¸ğ¸® »èÁ¦
+		// TODO: ë©”ëª¨ë¦¬ ì‚­ì œ
 	}
 
 	void PopBack()
@@ -126,11 +126,11 @@ public:
 			return;
 		}
 
-		// ¸Ç µÚ¿¡¼­ ÇÏ³ª ¾ÕÀÇ ³ëµå¸¦ Ã£¾Æ¾ß ÇÕ´Ï´Ù.
+		// ë§¨ ë’¤ì—ì„œ í•˜ë‚˜ ì•ì˜ ë…¸ë“œë¥¼ ì°¾ì•„ì•¼ í•©ë‹ˆë‹¤.
 
 		assert(first_);
 
-		// TODO: ¸Ş¸ğ¸® »èÁ¦
+		// TODO: ë©”ëª¨ë¦¬ ì‚­ì œ
 	}
 
 	void Reverse()
@@ -161,7 +161,7 @@ public:
 				{
 					//cout << "[" << current << ", " << current->item << ", " << current->next << "]";
 
-					// ÁÖ¼Ò¸¦ ÂªÀº Á¤¼ö·Î Ãâ·Â (¾Õ ºÎºĞÀº ´ëºÎºĞ µ¿ÀÏÇÏ±â¶§¹®¿¡ µŞºÎºĞ¸¸ Ãâ·Â)
+					// ì£¼ì†Œë¥¼ ì§§ì€ ì •ìˆ˜ë¡œ ì¶œë ¥ (ì• ë¶€ë¶„ì€ ëŒ€ë¶€ë¶„ ë™ì¼í•˜ê¸°ë•Œë¬¸ì— ë’·ë¶€ë¶„ë§Œ ì¶œë ¥)
 					cout << "[" << reinterpret_cast<uintptr_t>(current) % 100000 << ", "
 						<< current->item << ", "
 						<< reinterpret_cast<uintptr_t>(current->next) % 100000 << "]";

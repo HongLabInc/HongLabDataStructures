@@ -1,4 +1,4 @@
-#include "Array2D.h"
+ï»¿#include "Array2D.h"
 
 #include <algorithm>
 #include <cassert>
@@ -11,7 +11,7 @@ Array2D::Array2D(int num_rows, int num_cols)
 	//TODO:
 }
 
-// º¹»ç »ı¼ºÀÚ (b¸¦ º¹»ç)
+// ë³µì‚¬ ìƒì„±ì (bë¥¼ ë³µì‚¬)
 Array2D::Array2D(const Array2D& b)
 {
 	//TODO:
@@ -27,14 +27,14 @@ void Array2D::SetValue(int row, int col, float value)
 	// TODO:
 }
 
-float Array2D::GetValue(int row, int col) const // ¸Ç µÚÀÇ const´Â ÇÔ¼ö ¾È¿¡¼­ ¸â¹ö º¯¼öÀÇ °ªÀ» ¹Ù²ÙÁö ¾Ê°Ú´Ù´Â ÀÇ¹Ì
+float Array2D::GetValue(int row, int col) const // ë§¨ ë’¤ì˜ constëŠ” í•¨ìˆ˜ ì•ˆì—ì„œ ë©¤ë²„ ë³€ìˆ˜ì˜ ê°’ì„ ë°”ê¾¸ì§€ ì•Šê² ë‹¤ëŠ” ì˜ë¯¸
 {
 	return 0.0f; // TODO:
 }
 
 Array2D Array2D::Transpose()
 {
-	Array2D temp(num_cols_, num_rows_); // num_cols_, num_rows_ ¼ø¼­ ÁÖÀÇ
+	Array2D temp(num_cols_, num_rows_); // num_cols_, num_rows_ ìˆœì„œ ì£¼ì˜
 
 	for (int r = 0; r < num_rows_; r++)
 		for (int c = 0; c < num_cols_; c++)

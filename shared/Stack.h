@@ -1,9 +1,9 @@
-#pragma once
+ï»¿#pragma once
 
 #include <cassert>
 #include <iostream>
 
-template<typename T> // ÅÛÇÃ¸´ »ç¿ë
+template<typename T> // í…œí”Œë¦¿ ì‚¬ìš©
 class Stack
 {
 public:
@@ -41,7 +41,7 @@ public:
 	{
 		using namespace std;
 
-		for (int i = 0; i < Size(); i++) // Size() »ç¿ë
+		for (int i = 0; i < Size(); i++) // Size() ì‚¬ìš©
 			cout << stack_[i] << " ";
 		cout << endl;
 	}
@@ -57,7 +57,7 @@ public:
 	// Insert item into the TOP of the stack
 	void Push(const T& item)
 	{
-		// TODO: ÇÊ¿äÇÏ¸é ¸®»çÀÌÁî 
+		// TODO: í•„ìš”í•˜ë©´ ë¦¬ì‚¬ì´ì¦ˆ 
 
 		// TODO:
 	}
@@ -70,8 +70,8 @@ public:
 		// TODO:
 	}
 
-protected: // µÚ¿¡¼­ »ó¼ÓÇØ¼­ »ç¿ë
+protected: // ë’¤ì—ì„œ ìƒì†í•´ì„œ ì‚¬ìš©
 	T* stack_ = nullptr;
-	int top_ = -1; // 0 ¾Æ´Ô
+	int top_ = -1; // 0 ì•„ë‹˜
 	int capacity_ = 0;
 };

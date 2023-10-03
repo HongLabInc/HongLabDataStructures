@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include "../shared/SinglyLinkedList.h"
 
 using namespace std;
@@ -30,8 +30,8 @@ public:
 
 	LinkedPolynomial Add(const LinkedPolynomial& poly)
 	{
-		// this¿Í polyÀÇ terms_°¡ expÀÇ ¿À¸§Â÷¼øÀ¸·Î Á¤·ÄµÇ¾î ÀÖ´Ù°í °¡Á¤
-		// ÇÏ³ªÀÇ ´ÙÇ×½Ä ¾È¿¡ exp°¡ Áßº¹µÇ´Â termÀÌ ¾ø´Ù¶ó°í °¡Á¤ (ÇÑ exp´Â ÇÏ³ªÀÇ term¸¸ Á¸Àç)
+		// thisì™€ polyì˜ terms_ê°€ expì˜ ì˜¤ë¦„ì°¨ìˆœìœ¼ë¡œ ì •ë ¬ë˜ì–´ ìˆë‹¤ê³  ê°€ì •
+		// í•˜ë‚˜ì˜ ë‹¤í•­ì‹ ì•ˆì— expê°€ ì¤‘ë³µë˜ëŠ” termì´ ì—†ë‹¤ë¼ê³  ê°€ì • (í•œ expëŠ” í•˜ë‚˜ì˜ termë§Œ ì¡´ì¬)
 
 		LinkedPolynomial temp;
 
@@ -45,7 +45,7 @@ public:
 
 	void Print()
 	{
-		bool is_first = true; // ´õÇÏ±â Ãâ·Â½Ã È®ÀÎ¿ë
+		bool is_first = true; // ë”í•˜ê¸° ì¶œë ¥ì‹œ í™•ì¸ìš©
 
 		// TODO:
 
@@ -61,7 +61,7 @@ int main()
 
 	LinkedPolynomial p1;
 
-	// exp°¡ ÀÛÀº Ç×ºÎÅÍ Ãß°¡ÇÑ´Ù°í °¡Á¤
+	// expê°€ ì‘ì€ í•­ë¶€í„° ì¶”ê°€í•œë‹¤ê³  ê°€ì •
 	p1.NewTerm(1.0f, 0);	// 1 * x^0 = 1
 	p1.NewTerm(1.5f, 1);	// 1.5 * x^1
 	p1.NewTerm(2.0f, 2);	// 2 * x^2
@@ -77,9 +77,9 @@ int main()
 	// Add() Test1
 	cout << "Add() Test" << endl;
 	{
-		LinkedPolynomial p1; // max_degree´Â ±âº»°ªÀ¸·Î ¼³Á¤
+		LinkedPolynomial p1; // max_degreeëŠ” ê¸°ë³¸ê°’ìœ¼ë¡œ ì„¤ì •
 
-		// exp°¡ ÀÛÀº Ç×ºÎÅÍ Ãß°¡ÇÑ´Ù°í °¡Á¤
+		// expê°€ ì‘ì€ í•­ë¶€í„° ì¶”ê°€í•œë‹¤ê³  ê°€ì •
 		p1.NewTerm(1.0f, 0);
 		p1.NewTerm(1.5f, 1);
 		p1.NewTerm(2.0f, 2);
@@ -88,7 +88,7 @@ int main()
 
 		LinkedPolynomial p2;
 
-		// exp°¡ ÀÛÀº Ç×ºÎÅÍ Ãß°¡ÇÑ´Ù°í °¡Á¤
+		// expê°€ ì‘ì€ í•­ë¶€í„° ì¶”ê°€í•œë‹¤ê³  ê°€ì •
 		p2.NewTerm(1.0f, 1);
 		p2.NewTerm(3.0f, 2);
 		p2.NewTerm(5.0f, 7);
@@ -107,9 +107,9 @@ int main()
 	// Add() Test2
 	cout << "Add() Test2" << endl;
 	{
-		LinkedPolynomial p1; // max_degree´Â ±âº»°ªÀ¸·Î ¼³Á¤
+		LinkedPolynomial p1; // max_degreeëŠ” ê¸°ë³¸ê°’ìœ¼ë¡œ ì„¤ì •
 
-		// exp°¡ ÀÛÀº Ç×ºÎÅÍ Ãß°¡ÇÑ´Ù°í °¡Á¤
+		// expê°€ ì‘ì€ í•­ë¶€í„° ì¶”ê°€í•œë‹¤ê³  ê°€ì •
 		p1.NewTerm(1.0f, 0);
 		p1.NewTerm(1.5f, 1);
 		p1.NewTerm(2.0f, 2);
@@ -122,7 +122,7 @@ int main()
 
 		LinkedPolynomial p2;
 
-		// exp°¡ ÀÛÀº Ç×ºÎÅÍ Ãß°¡ÇÑ´Ù°í °¡Á¤
+		// expê°€ ì‘ì€ í•­ë¶€í„° ì¶”ê°€í•œë‹¤ê³  ê°€ì •
 		p2.NewTerm(3.2f, 0);
 		p2.NewTerm(1.0f, 1);
 		p2.NewTerm(3.0f, 2);

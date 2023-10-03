@@ -1,36 +1,36 @@
-#include "MyString.h"
+ï»¿#include "MyString.h"
 
 using namespace std;
 
-// ºñ¾î ÀÖ´Â MyString() »ı¼º
+// ë¹„ì–´ ìˆëŠ” MyString() ìƒì„±
 MyString::MyString()
 {
 	str_ = nullptr;
 	size_ = 0;
 }
 
-// ¸Ç µÚ¿¡ ³Î Ä³¸¯ÅÍ'\0'°¡ µé¾î ÀÖ´Â ¹®ÀÚ¿­·ÎºÎÅÍ ÃÊ±âÈ­
+// ë§¨ ë’¤ì— ë„ ìºë¦­í„°'\0'ê°€ ë“¤ì–´ ìˆëŠ” ë¬¸ìì—´ë¡œë¶€í„° ì´ˆê¸°í™”
 MyString::MyString(const char* init)
 {
-	// Å©±â(size_) °áÁ¤
+	// í¬ê¸°(size_) ê²°ì •
 
-	// ¸Ş¸ğ¸® ÇÒ´ç
+	// ë©”ëª¨ë¦¬ í• ë‹¹
 
-	// µ¥ÀÌÅÍ º¹»ç
+	// ë°ì´í„° ë³µì‚¬
 }
 
-// MyStringÀÇ ´Ù¸¥ instance·ÎºÎÅÍ ÃÊ±âÈ­
+// MyStringì˜ ë‹¤ë¥¸ instanceë¡œë¶€í„° ì´ˆê¸°í™”
 MyString::MyString(const MyString& str)
 {
-	// ±âº» º¹»ç »ı¼ºÀÚ´Â Æ÷ÀÎÅÍ ÁÖ¼Ò¸¸ º¹»çÇÏ±â ¶§¹®¿¡ 
-	// ¼Ò¸ê½Ã ¿À·ù ¹ß»ı
-	// ¿©±â¼­´Â »õ·Î ¸Ş¸ğ¸®¸¦ ÇÒ´ç ¹Ş¾Æ¼­ º¹»ç
+	// ê¸°ë³¸ ë³µì‚¬ ìƒì„±ìëŠ” í¬ì¸í„° ì£¼ì†Œë§Œ ë³µì‚¬í•˜ê¸° ë•Œë¬¸ì— 
+	// ì†Œë©¸ì‹œ ì˜¤ë¥˜ ë°œìƒ
+	// ì—¬ê¸°ì„œëŠ” ìƒˆë¡œ ë©”ëª¨ë¦¬ë¥¼ í• ë‹¹ ë°›ì•„ì„œ ë³µì‚¬
 
 }
 
 MyString::~MyString()
 {
-	// ¸Ş¸ğ¸® ÇØÁ¦
+	// ë©”ëª¨ë¦¬ í•´ì œ
 }
 
 bool MyString::IsEmpty()
@@ -38,9 +38,9 @@ bool MyString::IsEmpty()
 	return Length() == 0;
 }
 
-bool MyString::IsEqual(const MyString& str) // ÆíÀÇ»ó ÂüÁ¶& »ç¿ë
+bool MyString::IsEqual(const MyString& str) // í¸ì˜ìƒ ì°¸ì¡°& ì‚¬ìš©
 {
-	// ÈùÆ®: str.str_, str.size_ °¡´É
+	// íŒíŠ¸: str.str_, str.size_ ê°€ëŠ¥
 
 	return false;
 }
@@ -52,14 +52,14 @@ int MyString::Length()
 
 void MyString::Resize(int new_size)
 {
-	// ¸Ş¸ğ¸® ÀçÇÒ´ç°ú ¿ø·¡ °®°í ÀÖ´ø ³»¿ë º¹»ç
+	// ë©”ëª¨ë¦¬ ì¬í• ë‹¹ê³¼ ì›ë˜ ê°–ê³  ìˆë˜ ë‚´ìš© ë³µì‚¬
 }
 
-// ÀÎµ¦½º startÀ§Ä¡ÀÇ ±ÛÀÚºÎÅÍ num°³ÀÇ ±ÛÀÚ·Î »õ·Î¿î ¹®ÀÚ¿­ ¸¸µé±â
+// ì¸ë±ìŠ¤ startìœ„ì¹˜ì˜ ê¸€ìë¶€í„° numê°œì˜ ê¸€ìë¡œ ìƒˆë¡œìš´ ë¬¸ìì—´ ë§Œë“¤ê¸°
 MyString MyString::Substr(int start, int num)
 {
-	// º¹»çÇÒ ÀÎµ¦½º: start, start + 1, ... , start + num - 1
-	// assert(start + num - 1 < this->size_); // ¹®Á¦¸¦ ´Ü¼øÇÏ°Ô ¸¸µé±â À§ÇØ °¡Á¤
+	// ë³µì‚¬í•  ì¸ë±ìŠ¤: start, start + 1, ... , start + num - 1
+	// assert(start + num - 1 < this->size_); // ë¬¸ì œë¥¼ ë‹¨ìˆœí•˜ê²Œ ë§Œë“¤ê¸° ìœ„í•´ ê°€ì •
 
 	MyString temp;
 

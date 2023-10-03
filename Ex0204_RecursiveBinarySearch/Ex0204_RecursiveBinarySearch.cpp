@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <cassert>
 #include <algorithm> // swap
 
@@ -11,7 +11,7 @@ int BinarySearch(int* arr, int n, int x)
 
 	while (left <= right)
 	{
-		int middle = (left + right) / 2; // Á¤¼ö ³ª´©±â (¹ö¸²)
+		int middle = (left + right) / 2; // ì •ìˆ˜ ë‚˜ëˆ„ê¸° (ë²„ë¦¼)
 
 		cout << "middle " << middle << endl;
 
@@ -35,7 +35,7 @@ int BinarySearch(int* arr, int n, int x)
 	return -1; // Not found
 }
 
-int RecurBinarySearch(int* arr, int left, int right, int x) // n ´ë½Å¿¡ left, right
+int RecurBinarySearch(int* arr, int left, int right, int x) // n ëŒ€ì‹ ì— left, right
 {
 	if (left <= right)
 	{

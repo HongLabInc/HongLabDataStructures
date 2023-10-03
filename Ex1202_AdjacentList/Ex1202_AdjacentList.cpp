@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <cassert>
 
 #include "../shared/Stack.h"
@@ -18,7 +18,7 @@ public:
 	struct Node
 	{
 		//Vertex* vertex = nullptr;
-		int vertex = -1; // vertexÀÇ index
+		int vertex = -1; // vertexì˜ index
 		Node* next = nullptr;
 	};
 
@@ -49,7 +49,7 @@ public:
 		n_++;
 	}
 
-	void InsertEdge(int u, int v) // ¿©±â¼­ u, v´Â ÀÎµ¦½º
+	void InsertEdge(int u, int v) // ì—¬ê¸°ì„œ u, vëŠ” ì¸ë±ìŠ¤
 	{
 		assert(u < n_ && v < n_);
 
@@ -89,7 +89,7 @@ public:
 		cout << endl;
 	}
 
-	void DepthFirstTraversal(int v) // v´Â ÀÎµ¦½º
+	void DepthFirstTraversal(int v) // vëŠ” ì¸ë±ìŠ¤
 	{
 		// TODO:
 	}
@@ -108,7 +108,7 @@ public:
 	{
 		if (!visited_)
 			visited_ = new bool[max_vertices_];
-		for (int i = 0; i < max_vertices_; i++) visited_[i] = false; // ÃÊ±âÈ­
+		for (int i = 0; i < max_vertices_; i++) visited_[i] = false; // ì´ˆê¸°í™”
 	}
 
 private:

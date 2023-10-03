@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 
 #include "../shared/MaxHeap.h"
 
@@ -6,59 +6,59 @@ using namespace std;
 
 struct Patient
 {
-	int severity; // <- ÁßÁõµµ, Á¤·ÄÇÒ ¶§ÀÇ 1Â÷ÀûÀÎ Å°(key)·Î »ç¿ëµÊ
-	int time;	  // <- µµÂø½Ã°£, Á¤·ÄÇÒ ¶§ÀÇ 2Â÷ÀûÀÎ Å°(key)·Î »ç¿ëµÊ, ÁßÁõµµ°¡ °°À» ¶§´Â ¸ÕÀú ¿Â ¼ø¼­
+	int severity; // <- ì¤‘ì¦ë„, ì •ë ¬í•  ë•Œì˜ 1ì°¨ì ì¸ í‚¤(key)ë¡œ ì‚¬ìš©ë¨
+	int time;	  // <- ë„ì°©ì‹œê°„, ì •ë ¬í•  ë•Œì˜ 2ì°¨ì ì¸ í‚¤(key)ë¡œ ì‚¬ìš©ë¨, ì¤‘ì¦ë„ê°€ ê°™ì„ ë•ŒëŠ” ë¨¼ì € ì˜¨ ìˆœì„œ
 	const char* name;
 
-	// ¿ì¼±¼øÀ§ °üÁ¡¿¡¼­ ºÃÀ» ¶§ a >= b ÀÎÁö¸¦ ¹İÈ¯ÇÏ´Â ÇÔ¼ö
+	// ìš°ì„ ìˆœìœ„ ê´€ì ì—ì„œ ë´¤ì„ ë•Œ a >= b ì¸ì§€ë¥¼ ë°˜í™˜í•˜ëŠ” í•¨ìˆ˜
 	friend bool operator >= (const Patient& a, const Patient& b)
 	{
-		if (a.severity == b.severity) // ¿ì¼±¼øÀ§°¡ °°À» ¶§´Â ½Ã°£À» ±âÁØÀ¸·Î ´Ù½Ã ÆÇ´Ü (¼±Âø¼ø)
-			return a.time <= b.time;   // ¼ıÀÚ·Î½á timeÀÌ ÀÛÀº °ÍÀÌ ¸ÕÀú ¿Ô´Ù´Â ÀÇ¹Ì´Ï±î ÃÖÁ¾ ¿ì¼±¼øÀ§°¡ ´õ ³ô´Ù.
+		if (a.severity == b.severity) // ìš°ì„ ìˆœìœ„ê°€ ê°™ì„ ë•ŒëŠ” ì‹œê°„ì„ ê¸°ì¤€ìœ¼ë¡œ ë‹¤ì‹œ íŒë‹¨ (ì„ ì°©ìˆœ)
+			return a.time <= b.time;   // ìˆ«ìë¡œì¨ timeì´ ì‘ì€ ê²ƒì´ ë¨¼ì € ì™”ë‹¤ëŠ” ì˜ë¯¸ë‹ˆê¹Œ ìµœì¢… ìš°ì„ ìˆœìœ„ê°€ ë” ë†’ë‹¤.
 		else
-			return a.severity > b.severity; // ¿ì¼±¼øÀ§°¡ Å« ÂÊ ±âÁØ
+			return a.severity > b.severity; // ìš°ì„ ìˆœìœ„ê°€ í° ìª½ ê¸°ì¤€
 	}
 
 	friend bool operator < (const Patient& a, const Patient& b)
 	{
-		return !(a >= b); // ¾ÕÀÇ ! ÁÖÀÇ (operator >= È°¿ë) 
+		return !(a >= b); // ì•ì˜ ! ì£¼ì˜ (operator >= í™œìš©) 
 	}
 
 	friend std::ostream& operator << (std::ostream& os, const Patient& p)
 	{
-		// TODO: ÇÊ¿äÇÏ¸é ±¸Çö
+		// TODO: í•„ìš”í•˜ë©´ êµ¬í˜„
 		return os;
 	}
 };
 
 int main()
 {
-	// ÀÀ±Ş½Ç
+	// ì‘ê¸‰ì‹¤
 	MaxHeap<Patient> h;
 
-	// ¿ì¼±¼øÀ§°¡ ´õ ³ôÀº È¯ÀÚ ¸ÕÀú Ä¡·á
-	// ´õ ÁßÁõÀÎ °æ¿ì(severity°¡ Å« °æ¿ì) ¿ì¼±¼øÀ§°¡ ³ô´Ù.
-	// Áõ»óÀÇ ¹«°Å¿î Á¤µµ°¡ µ¿ÀÏÇÏ´Ù¸é(severity°¡ °°´Ù¸é) ¸ÕÀú ¿Â È¯ÀÚ ¸ÕÀú Ä¡·á(timeÀÌ ÀÛÀº È¯ÀÚ ¸ÕÀú)
+	// ìš°ì„ ìˆœìœ„ê°€ ë” ë†’ì€ í™˜ì ë¨¼ì € ì¹˜ë£Œ
+	// ë” ì¤‘ì¦ì¸ ê²½ìš°(severityê°€ í° ê²½ìš°) ìš°ì„ ìˆœìœ„ê°€ ë†’ë‹¤.
+	// ì¦ìƒì˜ ë¬´ê±°ìš´ ì •ë„ê°€ ë™ì¼í•˜ë‹¤ë©´(severityê°€ ê°™ë‹¤ë©´) ë¨¼ì € ì˜¨ í™˜ì ë¨¼ì € ì¹˜ë£Œ(timeì´ ì‘ì€ í™˜ì ë¨¼ì €)
 
-	h.Push({ 1, 0, "Ironman" });   // ÁßÁõµµ 1ÀÇ Ironman ½Ã°£ 0¿¡ µµÂø
-	h.Push({ 1, 1, "Nick Fury" }); // ÁßÁõµµ 1ÀÇ Nick Fury ½Ã°£ 1¿¡ µµÂø
-	h.Push({ 3, 2, "Hulk" });      // ÁßÁõµµ 3ÀÇ Hulk ½Ã°£ 2¿¡ µµÂø
+	h.Push({ 1, 0, "Ironman" });   // ì¤‘ì¦ë„ 1ì˜ Ironman ì‹œê°„ 0ì— ë„ì°©
+	h.Push({ 1, 1, "Nick Fury" }); // ì¤‘ì¦ë„ 1ì˜ Nick Fury ì‹œê°„ 1ì— ë„ì°©
+	h.Push({ 3, 2, "Hulk" });      // ì¤‘ì¦ë„ 3ì˜ Hulk ì‹œê°„ 2ì— ë„ì°©
 
-	cout << h.Top().name << endl;  // ÁßÁõµµ°¡ ³ôÀº Hulk ¸ÕÀú Ä¡·á
+	cout << h.Top().name << endl;  // ì¤‘ì¦ë„ê°€ ë†’ì€ Hulk ë¨¼ì € ì¹˜ë£Œ
 	h.Pop();
 
-	cout << h.Top().name << endl;  // ÁßÁõµµ°¡ µ¿ÀÏÇÏÁö¸¸ ¸ÕÀú µµÂøÇÑ Ironman
+	cout << h.Top().name << endl;  // ì¤‘ì¦ë„ê°€ ë™ì¼í•˜ì§€ë§Œ ë¨¼ì € ë„ì°©í•œ Ironman
 	h.Pop();
 
 	h.Push({ 2, 3, "Blue Beetle" });
 
-	cout << h.Top().name << endl;  // ´Ê°Ô µµÂøÇßÁö¸¸ ÁßÁõµµ°¡ ³ôÀº Blue Beetle
+	cout << h.Top().name << endl;  // ëŠ¦ê²Œ ë„ì°©í–ˆì§€ë§Œ ì¤‘ì¦ë„ê°€ ë†’ì€ Blue Beetle
 	h.Pop();
 
-	cout << h.Top().name << endl;  // ¸¶Áö¸·À¸·Î Nick Fury
+	cout << h.Top().name << endl;  // ë§ˆì§€ë§‰ìœ¼ë¡œ Nick Fury
 	h.Pop();
 
-	/* Ãâ·Â ¿¹½Ã
+	/* ì¶œë ¥ ì˜ˆì‹œ
 	Hulk
 	Ironman
 	Blue Beetle

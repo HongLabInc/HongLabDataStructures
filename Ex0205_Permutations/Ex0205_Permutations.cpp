@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <cassert>
 #include <algorithm> // swap
 
@@ -16,10 +16,10 @@ void RecurPermutations(char* arr, int left, int right)
 	}
 	else
 	{
-		// ÈùÆ®
-		// - for, swap(), Àç±ÍÈ£Ãâ
-		// - °°Àº º¯¼ö³¢¸®µµ swap() °¡´É
-		// - right´Â °íÁ¤
+		// íŒíŠ¸
+		// - for, swap(), ì¬ê·€í˜¸ì¶œ
+		// - ê°™ì€ ë³€ìˆ˜ë¼ë¦¬ë„ swap() ê°€ëŠ¥
+		// - rightëŠ” ê³ ì •
 
 		// TODO:
 	}
@@ -27,18 +27,18 @@ void RecurPermutations(char* arr, int left, int right)
 
 int main()
 {
-	/* a ÇÑ ±ÛÀÚÀÇ ¼ø¿­ (Permutations)
+	/* a í•œ ê¸€ìì˜ ìˆœì—´ (Permutations)
 
 		a
 	*/
 
-	/* ab µÎ ±ÛÀÚÀÇ ¼ø¿­ (Permutations)
+	/* ab ë‘ ê¸€ìì˜ ìˆœì—´ (Permutations)
 
 		a b
 		b a
 	*/
 
-	/*  abc 3 ±ÛÀÚÀÇ ¼ø¿­ (Permutations)
+	/*  abc 3 ê¸€ìì˜ ìˆœì—´ (Permutations)
 
 		a b c
 		a c b

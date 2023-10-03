@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <iomanip>
 
 using namespace std;
@@ -45,7 +45,7 @@ void InsertionSort(int arr[], int n)
 	}
 }
 
-void InsertionSort(int arr[], int n, int gap) // gap Ãß°¡
+void InsertionSort(int arr[], int n, int gap) // gap ì¶”ê°€
 {
 	cout << "gap = " << gap << endl;
 
@@ -83,6 +83,6 @@ int main()
 
 	ShellSort(arr, n);
 
-	// ÃÖ¾Ç O(n^2), Æò±Õ O(n^1.5)
+	// ìµœì•… O(n^2), í‰ê·  O(n^1.5)
 }
 

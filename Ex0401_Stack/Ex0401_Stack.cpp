@@ -1,12 +1,12 @@
-#include <iostream>
+ï»¿#include <iostream>
 
-#include "../shared/Stack.h" // °æ·Î "shared" ÁÖÀÇ
+#include "../shared/Stack.h" // ê²½ë¡œ "shared" ì£¼ì˜
 
 int main()
 {
 	using namespace std;
 
-	// ÀÏÁ¾ÀÇ °¡¹æ(bag), ÄÁÅ×ÀÌ³Ê(container)
+	// ì¼ì¢…ì˜ ê°€ë°©(bag), ì»¨í…Œì´ë„ˆ(container)
 	// LIFO(Last-In-First-Out)
 
 	Stack<char> s;
@@ -40,9 +40,9 @@ int main()
 
 	s.Pop();
 
-	// cout << "Top = " << s.Top() << endl; // ºñ¾úÀ» ¶§ Top() ºÒ°¡
+	// cout << "Top = " << s.Top() << endl; // ë¹„ì—ˆì„ ë•Œ Top() ë¶ˆê°€
 
-	// ´Ù¸¥ ÀÚ·áÇüÀÇ stackµµ ½±°Ô ¸¸µé ¼ö ÀÖ¾î¿ä.
+	// ë‹¤ë¥¸ ìë£Œí˜•ì˜ stackë„ ì‰½ê²Œ ë§Œë“¤ ìˆ˜ ìˆì–´ìš”.
 	{
 		//Stack<int> int_stack;
 		//int_stack.Push(123);
@@ -50,10 +50,10 @@ int main()
 		//int_stack.Top();
 	}
 
-	// ¹®ÀÚ¿­ ¼ø¼­ µÚÁı¾î¼­ Ãâ·ÂÇÏ±â (½ºÅÃ »ç¿ëÇÏ±â ¿¬½À)
+	// ë¬¸ìì—´ ìˆœì„œ ë’¤ì§‘ì–´ì„œ ì¶œë ¥í•˜ê¸° (ìŠ¤íƒ ì‚¬ìš©í•˜ê¸° ì—°ìŠµ)
 	{
 		//const char str[] = "Hello, World!";
-		//const int size = sizeof(str) - 1; // ¸¶Áö¸· '\0' Á¦¿Ü
+		//const int size = sizeof(str) - 1; // ë§ˆì§€ë§‰ '\0' ì œì™¸
 
 		//cout << "Input: " << str << endl;
 

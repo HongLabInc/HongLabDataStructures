@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 
 #include "BinarySearchTree.h"
 
@@ -23,7 +23,7 @@ public:
 
 	int Height(Node* node)
 	{
-		return Base::Height(node); // Çò°¥¸² ¹æÁö¿ë
+		return Base::Height(node); // í—·ê°ˆë¦¼ ë°©ì§€ìš©
 	}
 
 	int Balance(Node* node)
@@ -72,7 +72,7 @@ public:
 
 		int balance = Balance(node);
 
-		// balance°¡ 0, 1, -1 ÀÌ¸é Á¶ÀıÇÒ ÇÊ¿ä°¡ ¾ø´Ù°í ÆÇ´Ü
+		// balanceê°€ 0, 1, -1 ì´ë©´ ì¡°ì ˆí•  í•„ìš”ê°€ ì—†ë‹¤ê³  íŒë‹¨
 
 		// LL -> Right Rotation
 		//if (balance > 1 && Balance(node->left) >= 0)
@@ -114,7 +114,7 @@ public:
 
 	Node* Remove(Node* node, const K& key)
 	{
-		// BST¿Í µ¿ÀÏ
+		// BSTì™€ ë™ì¼
 		if (!node) return node;
 
 		if (key < node->item.key)
@@ -144,7 +144,7 @@ public:
 		if (node == NULL)
 			return node;
 
-		// ±ÕÇü Àâ±â
+		// ê· í˜• ì¡ê¸°
 
 		int balance = Balance(node);
 
@@ -155,5 +155,5 @@ public:
 
 private:
 	Node*& root_ = BinarySearchTree<K, V>::root_;
-	// this->root_·Îµµ »ç¿ë °¡´É
+	// this->root_ë¡œë„ ì‚¬ìš© ê°€ëŠ¥
 };

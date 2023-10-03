@@ -1,7 +1,7 @@
-#pragma once
+ï»¿#pragma once
 
-// ¾Õ ¿¹Á¦¿Í ±¸ºĞÇÏ±â À§ÇØ Array2D ¶ó´Â ÀÌ¸§ »ç¿ë
-// ³»¿ëÀº Matrix¿Í µ¿ÀÏ
+// ì• ì˜ˆì œì™€ êµ¬ë¶„í•˜ê¸° ìœ„í•´ Array2D ë¼ëŠ” ì´ë¦„ ì‚¬ìš©
+// ë‚´ìš©ì€ Matrixì™€ ë™ì¼
 class Array2D
 {
 public:
@@ -22,7 +22,7 @@ public:
 	void Print();
 
 private:
-	float** arrays_ = nullptr; // 2Áß Æ÷ÀÎÅÍ
+	float** arrays_ = nullptr; // 2ì¤‘ í¬ì¸í„°
 	int num_rows_ = 0;
 	int num_cols_ = 0;
 };
