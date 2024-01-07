@@ -14,7 +14,7 @@
 - 코테 공부용 C++ 문법은 **[C++ 핵심정리(무료)](https://honglab.co.kr/courses/cppsummary)**
 
 ## 예제 사용 방법
-- Visual Studio 2022 설정 제공 (HongLabDataStructures.sln 더블 클릭)
+- Visual Studio 2022 설정 제공 (**HongLabDataStructures.sln 더블 클릭**)
 - Visual Studio Code는 VSCode 폴더 사용 ([VSCode 사용법](https://youtu.be/uDq7woPOZ_A?si=3qoGEBENHcFFOttB))
 - 맥에서 VSCode 사용 시에는 tasks.json에 "-std=c++17" 과 "${fileDirname}/*.cpp" 추가해주세요. [샘플](https://github.com/HongLabInc/HongLabCppSummary/blob/main/.vscode_mac/tasks.json)
 
