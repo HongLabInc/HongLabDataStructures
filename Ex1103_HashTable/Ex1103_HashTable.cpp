@@ -40,7 +40,7 @@ public:
 		return table_[index].value;
 	}
 
-	// 정수 -> 해쉬값
+	// 정수 -> 해시값
 	size_t HashFunc(const int& key)
 	{
 		// TODO:
@@ -48,7 +48,7 @@ public:
 		return key;
 	}
 
-	// 문자열을 정수 인덱스(해쉬값)로 변환
+	// 문자열을 정수 인덱스(해시값)로 변환
 	// Horner's method
 	//size_t HashFunc(const string& s)
 	//{
