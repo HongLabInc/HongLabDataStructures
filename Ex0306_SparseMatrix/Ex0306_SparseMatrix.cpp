@@ -6,7 +6,7 @@ int main()
 {
 	using namespace std;
 
-	SparseMatrix m1(4, 6, 6); // 4 by 6 matrix, Non-zero term 8개
+	SparseMatrix m1(4, 6, 6); // 4 by 6 matrix, Non-zero term 6개
 
 	// 정렬되지 않은 순서로 추가
 	m1.SetValue(2, 3, 5.0f);
