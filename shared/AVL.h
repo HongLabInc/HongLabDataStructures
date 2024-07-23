@@ -141,8 +141,7 @@ public:
 			node->right = Remove(node->right, temp->item.key);
 		}
 
-		if (node == NULL)
-			return node;
+		//if (node == NULL)	return node; // 불필요 (입력 node의 자식이 하나이거나 없는 경우에는 위에서 return 하기 때문)
 
 		// 균형 잡기
 
