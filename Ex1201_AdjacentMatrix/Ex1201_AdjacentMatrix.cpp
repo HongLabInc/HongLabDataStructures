@@ -132,6 +132,21 @@ int main()
 	for (int i = 0; i < g.Capacity(); i++)
 		g.InsertVertex(i);
 
+	/*
+	// 위키피디아 버전
+	g.InsertEdge(0, 2);	g.InsertEdge(2, 0);
+	g.InsertEdge(0, 1);	g.InsertEdge(1, 0);
+	g.InsertEdge(1, 4);	g.InsertEdge(4, 1);
+	g.InsertEdge(1, 3);	g.InsertEdge(3, 1);
+	g.InsertEdge(2, 4);	g.InsertEdge(4, 2);
+	g.InsertEdge(3, 6);	g.InsertEdge(6, 3);
+	g.InsertEdge(4, 6);	g.InsertEdge(6, 4);
+	g.InsertEdge(5, 6);	g.InsertEdge(6, 5);
+	g.InsertEdge(3, 0);	g.InsertEdge(0, 3);
+	g.InsertEdge(4, 0);	g.InsertEdge(0, 4);
+	*/
+
+	// 강의 영상 버전
 	g.InsertEdge(0, 2);	g.InsertEdge(2, 0);
 	g.InsertEdge(0, 1);	g.InsertEdge(1, 0);
 	g.InsertEdge(1, 4);	g.InsertEdge(4, 1);
